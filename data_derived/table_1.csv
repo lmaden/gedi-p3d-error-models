@@ -1,0 +1,20 @@
+Site,State,Lat (°N),Lon (°E),Ecoregion,Dominant LC,Area (km²),n,Slope IQR (°),Elev IQR (m)
+1,ME,46.05,-69.86,Atlantic Highlands,BDF,"20,284","233,061",3.0-7.0,335-434
+2,ME,45.21,-68.76,Mixed Wood Plains,ENF,34,"1,542",2.9-4.2,79-116
+3,MA,42.52,-71.19,Mixed Wood Plains,BDF,167,"6,931",2.6-6.0,27-42
+4,MA,42.48,-72.13,Mixed Wood Plains,BDF,145,"13,387",3.6-8.1,313-344
+5,SC,33.26,-80.10,SE Coastal Plains,ENF,"23,120","213,304",1.6-2.9,8-29
+6,GA,31.24,-84.46,SE USA Plains,ENF,414,"18,941",1.5-2.7,43-49
+7,AL,32.93,-87.42,SE USA Plains,ENF,187,"18,080",7.7-14.9,98-129
+8,AL,32.55,-87.82,SE USA Plains,IWL,151,"7,194",1.7-3.4,25-29
+9,AL,31.83,-88.19,SE USA Plains,ENF,162,"11,520",2.0-7.3,13-31
+10,TX,33.37,-97.61,SC Semiarid Prairies,BDF,165,"9,714",4.2-14.5,-
+11,KS,39.15,-96.57,SC Semiarid Prairies,BDF,378,"12,474",3.9-12.8,332-378
+12,WI,45.50,-89.50,Mixed Wood Shield,BDF,258,"10,205",2.7-8.3,488-516
+13,MN,46.21,-89.51,Mixed Wood Shield,BDF,216,"7,648",3.2-9.1,509-522
+14,MN,45.81,-90.04,Mixed Wood Shield,BDF,19,"1,234",2.2-4.1,485-488
+15,ND,47.16,-99.17,WC Semiarid Prairies,GRS,379,"1,468",3.3-7.7,559-596
+16,CO,40.49,-103.04,SC Semiarid Prairies,GRS,26,81,1.8-2.9,"1,364-1,380"
+17,CO,40.82,-104.73,SC Semiarid Prairies,GRS,36,70,1.8-5.0,"1,660-1,671"
+18,CA,39.01,-120.07,Western Cordillera,ENF,"2,624","49,704",10.1-23.0,"2,229-2,531"
+19,CA,37.09,-119.73,Mediterranean CA,GRS,130,"4,023",8.9-15.8,337-441

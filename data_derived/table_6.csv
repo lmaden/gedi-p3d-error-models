@@ -1,0 +1,11 @@
+Product,Forest Type,n,RMSE (m),MAE (m),Bias (m),R²,CRPS (m)
+CHM,Broadleaf Deciduous (BDF),"29,730",4.54,3.19,+0.55,0.26,2.338
+,Deciduous Needleleaf (DNF),"6,097",4.52,3.44,+0.51,0.17,2.454
+,Evergreen Broadleaf (EBF),"1,533",3.87,2.71,+0.14,0.12,1.986
+,Evergreen Needleleaf (ENF),"129,359",4.41,2.91,+0.36,0.04,2.191
+,All Forest Types,"166,719",4.43,2.98,+0.40,0.15,2.225
+DTM,Broadleaf Deciduous (BDF),"109,313",3.28,2.33,-0.31,0.25,1.721
+,Deciduous Needleleaf (DNF),"29,718",3.16,2.22,-0.30,0.21,1.646
+,Evergreen Broadleaf (EBF),"5,864",3.08,2.19,-0.27,0.22,1.616
+,Evergreen Needleleaf (ENF),"165,352",2.92,1.98,-0.29,0.21,1.476
+,All Forest Types,"310,247",3.09,2.13,-0.30,0.22,1.581

@@ -1,0 +1,14 @@
+Metric,CHM 16-site,DTM 18-site
+n (training footprints),"124,966","202,278"
+Bayesian R² (full model),0.131,0.194
+R² from fixed effects,0.017 (12.8%),0.114 (58.7%)
+R² from random effects,0.114 (87.2%),0.080 (41.3%)
+Student-t ν,2.80,3.16
+Max R̂,1.006,1.003
+Min ESS ratio,0.232,0.206
+Min bulk-ESS,"1,392","1,234"
+Divergent transitions,0,0
+"RMSE, holdout (m)",4.48,3.01
+"MAE, holdout (m)",2.97,2.07
+"R², holdout",0.11,0.23
+95% interval coverage,0.934,0.934

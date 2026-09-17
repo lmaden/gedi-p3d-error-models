@@ -1,0 +1,214 @@
+loo_table_build.R -- read-only
+started: 2026-08-17 15:48:16
+
+============================================================================================ 
+##  RECOMPUTED POOLED METRICS 
+============================================================================================ 
+
+DTM: 18 folds | 6 replaced by _ad099: 4, 7, 8, 13, 14, 15
+  valid (eco_known) sites: 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 17, 18  [14 of 18]
+
+  per-fold rung-2 rows:
+     site     n   rmse eco_known                             file
+    <int> <int>  <num>    <lgcl>                           <char>
+ 1:     1 76630 3.3009      TRUE        loo_metrics_dtm_site1.csv
+ 2:     2   514 2.6707      TRUE        loo_metrics_dtm_site2.csv
+ 3:     3  2314 2.3732      TRUE        loo_metrics_dtm_site3.csv
+ 4:     4  4439 7.1762      TRUE  loo_metrics_dtm_site4_ad099.csv
+ 5:     5 71065 3.2544     FALSE        loo_metrics_dtm_site5.csv
+ 6:     6  6255 1.7800      TRUE        loo_metrics_dtm_site6.csv
+ 7:     7  5988 5.1105      TRUE  loo_metrics_dtm_site7_ad099.csv
+ 8:     8  2416 2.1526      TRUE  loo_metrics_dtm_site8_ad099.csv
+ 9:     9  3753 3.0320      TRUE        loo_metrics_dtm_site9.csv
+10:    11  4137 1.9484      TRUE       loo_metrics_dtm_site11.csv
+11:    12  3406 3.3564      TRUE       loo_metrics_dtm_site12.csv
+12:    13  2545 4.4807      TRUE loo_metrics_dtm_site13_ad099.csv
+13:    14   413 2.2581      TRUE loo_metrics_dtm_site14_ad099.csv
+14:    15   488 1.9354     FALSE loo_metrics_dtm_site15_ad099.csv
+15:    17    27 3.1258      TRUE       loo_metrics_dtm_site17.csv
+16:    18    23 1.3897      TRUE       loo_metrics_dtm_site18.csv
+17:    19 16532 2.6579     FALSE       loo_metrics_dtm_site19.csv
+18:    20  1333 2.0463     FALSE       loo_metrics_dtm_site20.csv
+
+CHM: 16 folds | 4 replaced by _init0: 4, 9, 11, 20
+  valid (eco_known) sites: 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 18  [11 of 16]
+
+  per-fold rung-2 rows:
+     site     n   rmse eco_known                             file
+    <int> <int>  <num>    <lgcl>                           <char>
+ 1:     4  4418 7.2467     FALSE  loo_metrics_chm_site4_init0.csv
+ 2:     5 70342 5.1974     FALSE        loo_metrics_chm_site5.csv
+ 3:     6  6242 4.8120      TRUE        loo_metrics_chm_site6.csv
+ 4:     7  5966 6.1998      TRUE        loo_metrics_chm_site7.csv
+ 5:     8  2373 3.7717      TRUE        loo_metrics_chm_site8.csv
+ 6:     9  3741 5.4305      TRUE  loo_metrics_chm_site9_init0.csv
+ 7:    10  3206 2.2457      TRUE       loo_metrics_chm_site10.csv
+ 8:    11  4116 2.2454      TRUE loo_metrics_chm_site11_init0.csv
+ 9:    12  3368 3.5815      TRUE       loo_metrics_chm_site12.csv
+10:    13  2523 4.1942      TRUE       loo_metrics_chm_site13.csv
+11:    14   407 7.3224      TRUE       loo_metrics_chm_site14.csv
+12:    15   484 2.1151     FALSE       loo_metrics_chm_site15.csv
+13:    17    27 1.4391      TRUE       loo_metrics_chm_site17.csv
+14:    18    23 1.4459      TRUE       loo_metrics_chm_site18.csv
+15:    19 16402 2.6100     FALSE       loo_metrics_chm_site19.csv
+16:    20  1328 2.0819     FALSE loo_metrics_chm_site20_init0.csv
+
+    product  basis  rung folds      n   rmse    bias   crps width90  cov50
+     <char> <char> <int> <int>  <int>  <num>   <num>  <num>   <num>  <num>
+ 1:     dtm    all     1    18 202278 3.0031 -0.3389 1.5314  8.9102 0.5039
+ 2:     dtm    all     2    18 202278 3.3622 -0.1817 1.7745 10.5326 0.5294
+ 3:     dtm    all     3    18 202278 3.3833 -0.9611 1.7628 10.8275 0.5793
+ 4:     dtm  valid     1    14 112860 3.1057 -0.2294 1.6007  9.5102 0.5014
+ 5:     dtm  valid     2    14 112860 3.5342  0.3915 1.9015 10.3305 0.4482
+ 6:     dtm  valid     3    14 112860 3.5671 -0.9764 1.8782 10.8066 0.5335
+ 7:     chm    all     1    16 124966 4.4448  0.4537 2.2201 12.8073 0.5071
+ 8:     chm    all     2    16 124966 4.8307 -0.3842 2.6083 13.4321 0.4315
+ 9:     chm    all     3    16 124966 4.8286 -0.5043 2.5999 13.7828 0.4469
+10:     chm  valid     1    11  31992 4.0795 -0.1628 2.0649 12.8584 0.4858
+11:     chm  valid     2    11  31992 4.5570  0.2196 2.4762 13.6345 0.4529
+12:     chm  valid     3    11  31992 4.5268 -0.1725 2.4445 14.1352 0.4878
+     cov90  cov95
+     <num>  <num>
+ 1: 0.8925 0.9430
+ 2: 0.8919 0.9417
+ 3: 0.8949 0.9398
+ 4: 0.8951 0.9508
+ 5: 0.8782 0.9400
+ 6: 0.8828 0.9363
+ 7: 0.8913 0.9424
+ 8: 0.8586 0.9307
+ 9: 0.8686 0.9353
+10: 0.9102 0.9628
+11: 0.8626 0.9475
+12: 0.8790 0.9514
+
+============================================================================================ 
+##  DIFF AGAINST CHECKPOINT sec 6.2 / sec 6.3 
+============================================================================================ 
+
+CHM  all    rung 1   (folds 16)
+    n        recomputed 124966.0000   recorded 124966.0000   OK
+    rmse     recomputed      4.4448   recorded      4.4450   OK
+    bias     recomputed      0.4537   recorded      0.4540   OK
+    crps     recomputed      2.2201   recorded      2.2200   OK
+    width90  recomputed     12.8073   recorded     12.8070   OK
+    cov50    recomputed      0.5071   recorded      0.5070   OK
+    cov90    recomputed      0.8913   recorded      0.8910   OK
+    cov95    recomputed      0.9424   recorded      0.9420   OK
+
+CHM  all    rung 2   (folds 16)
+    n        recomputed 124966.0000   recorded 124966.0000   OK
+    rmse     recomputed      4.8307   recorded      4.8310   OK
+    bias     recomputed     -0.3842   recorded     -0.3840   OK
+    crps     recomputed      2.6083   recorded      2.6080   OK
+    width90  recomputed     13.4321   recorded     13.4320   OK
+    cov50    recomputed      0.4315   recorded      0.4310   OK
+    cov90    recomputed      0.8586   recorded      0.8590   OK
+    cov95    recomputed      0.9307   recorded      0.9310   OK
+
+CHM  all    rung 3   (folds 16)
+    n        recomputed 124966.0000   recorded 124966.0000   OK
+    rmse     recomputed      4.8286   recorded      4.8290   OK
+    bias     recomputed     -0.5043   recorded     -0.5040   OK
+    crps     recomputed      2.5999   recorded      2.6000   OK
+    width90  recomputed     13.7828   recorded     13.7830   OK
+    cov50    recomputed      0.4469   recorded      0.4470   OK
+    cov90    recomputed      0.8686   recorded      0.8690   OK
+    cov95    recomputed      0.9353   recorded      0.9350   OK
+
+CHM  valid  rung 1   (folds 11)
+    n        recomputed  31992.0000   recorded  31992.0000   OK
+    rmse     recomputed      4.0795   recorded      4.0790   OK
+    bias     recomputed     -0.1628   recorded     -0.1630   OK
+    crps     recomputed      2.0649   recorded      2.0650   OK
+    width90  recomputed     12.8584   recorded     12.8580   OK
+    cov50    recomputed      0.4858   recorded      0.4860   OK
+    cov90    recomputed      0.9102   recorded      0.9100   OK
+    cov95    recomputed      0.9628   recorded      0.9630   OK
+
+CHM  valid  rung 2   (folds 11)
+    n        recomputed  31992.0000   recorded  31992.0000   OK
+    rmse     recomputed      4.5570   recorded      4.5570   OK
+    bias     recomputed      0.2196   recorded      0.2200   OK
+    crps     recomputed      2.4762   recorded      2.4760   OK
+    width90  recomputed     13.6345   recorded     13.6350   OK
+    cov50    recomputed      0.4529   recorded      0.4530   OK
+    cov90    recomputed      0.8626   recorded      0.8630   OK
+    cov95    recomputed      0.9475   recorded      0.9480   OK
+
+CHM  valid  rung 3   (folds 11)
+    n        recomputed  31992.0000   recorded  31992.0000   OK
+    rmse     recomputed      4.5268   recorded      4.5270   OK
+    bias     recomputed     -0.1725   recorded     -0.1720   OK
+    crps     recomputed      2.4445   recorded      2.4440   OK
+    width90  recomputed     14.1352   recorded     14.1350   OK
+    cov50    recomputed      0.4878   recorded      0.4880   OK
+    cov90    recomputed      0.8790   recorded      0.8790   OK
+    cov95    recomputed      0.9514   recorded      0.9510   OK
+
+DTM  all    rung 1   (folds 18)
+    n        recomputed 202278.0000   recorded 202278.0000   OK
+    rmse     recomputed      3.0031   recorded      3.0030   OK
+    bias     recomputed     -0.3389   recorded     -0.3390   OK
+    crps     recomputed      1.5314   recorded      1.5310   OK
+    width90  recomputed      8.9102   recorded      8.9100   OK
+    cov50    recomputed      0.5039   recorded      0.5040   OK
+    cov90    recomputed      0.8925   recorded      0.8930   OK
+    cov95    recomputed      0.9430   recorded      0.9430   OK
+
+DTM  all    rung 2   (folds 18)
+    n        recomputed 202278.0000   recorded 202278.0000   OK
+    rmse     recomputed      3.3622   recorded      3.3620   OK
+    bias     recomputed     -0.1817   recorded     -0.1820   OK
+    crps     recomputed      1.7745   recorded      1.7740   OK
+    width90  recomputed     10.5326   recorded     10.5330   OK
+    cov50    recomputed      0.5294   recorded      0.5290   OK
+    cov90    recomputed      0.8919   recorded      0.8920   OK
+    cov95    recomputed      0.9417   recorded      0.9420   OK
+
+DTM  all    rung 3   (folds 18)
+    n        recomputed 202278.0000   recorded 202278.0000   OK
+    rmse     recomputed      3.3833   recorded      3.3830   OK
+    bias     recomputed     -0.9611   recorded     -0.9610   OK
+    crps     recomputed      1.7628   recorded      1.7630   OK
+    width90  recomputed     10.8275   recorded     10.8270   OK
+    cov50    recomputed      0.5793   recorded      0.5790   OK
+    cov90    recomputed      0.8949   recorded      0.8950   OK
+    cov95    recomputed      0.9398   recorded      0.9400   OK
+
+DTM  valid  rung 1   (folds 14)
+    n        recomputed 112860.0000   recorded 112860.0000   OK
+    rmse     recomputed      3.1057   recorded      3.1060   OK
+    bias     recomputed     -0.2294   recorded     -0.2290   OK
+    crps     recomputed      1.6007   recorded      1.6010   OK
+    width90  recomputed      9.5102   recorded      9.5100   OK
+    cov50    recomputed      0.5014   recorded      0.5010   OK
+    cov90    recomputed      0.8951   recorded      0.8950   OK
+    cov95    recomputed      0.9508   recorded      0.9510   OK
+
+DTM  valid  rung 2   (folds 14)
+    n        recomputed 112860.0000   recorded 112860.0000   OK
+    rmse     recomputed      3.5342   recorded      3.5340   OK
+    bias     recomputed      0.3915   recorded      0.3920   OK
+    crps     recomputed      1.9015   recorded      1.9020   OK
+    width90  recomputed     10.3305   recorded     10.3310   OK
+    cov50    recomputed      0.4482   recorded      0.4480   OK
+    cov90    recomputed      0.8782   recorded      0.8780   OK
+    cov95    recomputed      0.9400   recorded      0.9400   OK
+
+DTM  valid  rung 3   (folds 14)
+    n        recomputed 112860.0000   recorded 112860.0000   OK
+    rmse     recomputed      3.5671   recorded      3.5670   OK
+    bias     recomputed     -0.9764   recorded     -0.9760   OK
+    crps     recomputed      1.8782   recorded      1.8780   OK
+    width90  recomputed     10.8066   recorded     10.8070   OK
+    cov50    recomputed      0.5335   recorded      0.5340   OK
+    cov90    recomputed      0.8828   recorded      0.8830   OK
+    cov95    recomputed      0.9363   recorded      0.9360   OK
+
+============================================================================================ 
+##  SUMMARY: 0 of 96 cell(s) differ beyond tolerance 
+============================================================================================ 
+All cells reproduce. Build the main-text LOO table from this run.
+
+finished: 2026-08-17 15:48:16

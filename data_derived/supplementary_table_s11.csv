@@ -1,0 +1,25 @@
+Method,RMSE,CRPS,Cov50,Cov90,Width90
+"CHM, all folds (16; n = 124,966)",,,,,
+Model (new site),4.831,2.608,0.432,0.859,13.432
+Per-site offset (in sample),4.485,2.366,0.355,0.858,11.840
+Global constant,4.792,2.571,0.402,0.823,13.223
+Linear regression,4.830,2.571,0.366,0.843,13.151
+Random forest,5.003,2.675,0.386,0.827,13.407
+"CHM, valid folds (11; n = 31,992)",,,,,
+Model (new site),4.557,2.476,0.453,0.863,13.635
+Per-site offset (in sample),4.111,2.216,0.372,0.868,11.894
+Global constant,4.553,2.513,0.460,0.864,13.469
+Linear regression,4.527,2.471,0.382,0.865,13.265
+Random forest,4.507,2.461,0.425,0.869,13.621
+"DTM, all folds (18; n = 202,278)",,,,,
+Model (new site),3.362,1.774,0.529,0.892,10.533
+Per-site offset (in sample),3.310,1.779,0.309,0.875,9.296
+Global constant,3.434,1.795,0.430,0.882,10.325
+Linear regression,3.379,1.792,0.416,0.875,10.245
+Random forest,3.259,1.719,0.469,0.900,10.552
+"DTM, valid folds (14; n = 112,860)",,,,,
+Model (new site),3.534,1.902,0.448,0.878,10.331
+Per-site offset (in sample),3.439,1.884,0.305,0.842,9.210
+Global constant,3.591,1.924,0.401,0.851,10.302
+Linear regression,3.561,1.934,0.365,0.836,10.189
+Random forest,3.429,1.852,0.421,0.874,10.515

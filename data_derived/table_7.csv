@@ -1,0 +1,15 @@
+Assumed knowledge at the held-out site,Basis,Folds,n,RMSE (m),Bias (m),CRPS (m),90% width (m),Cov. 50%,Cov. 90%,Cov. 95%
+16-site CHM model,,,,,,,,,,
+Site offset known (oracle),All folds,16,"124,966",4.44,+0.45,2.22,12.81,0.507,0.891,0.942
+New site,All folds,16,"124,966",4.83,-0.38,2.61,13.43,0.432,0.859,0.931
+"New site, new ecoregion",All folds,16,"124,966",4.83,-0.50,2.60,13.78,0.447,0.869,0.935
+Site offset known (oracle),Valid folds,11,"31,992",4.08,-0.16,2.06,12.86,0.486,0.910,0.963
+New site,Valid folds,11,"31,992",4.56,+0.22,2.48,13.63,0.453,0.863,0.948
+"New site, new ecoregion",Valid folds,11,"31,992",4.53,-0.17,2.44,14.14,0.488,0.879,0.951
+18-site DTM model,,,,,,,,,,
+Site offset known (oracle),All folds,18,"202,278",3.00,-0.34,1.53,8.91,0.504,0.893,0.943
+New site,All folds,18,"202,278",3.36,-0.18,1.77,10.53,0.529,0.892,0.942
+"New site, new ecoregion",All folds,18,"202,278",3.38,-0.96,1.76,10.83,0.579,0.895,0.940
+Site offset known (oracle),Valid folds,14,"112,860",3.11,-0.23,1.60,9.51,0.501,0.895,0.951
+New site,Valid folds,14,"112,860",3.53,+0.39,1.90,10.33,0.448,0.878,0.940
+"New site, new ecoregion",Valid folds,14,"112,860",3.57,-0.98,1.88,10.81,0.534,0.883,0.936

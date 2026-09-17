@@ -1,0 +1,22 @@
+manuscript_site,tracker_site,site_short_name,site_dir_used_in_pipeline,state,ecoregion_id,ecoregion_name,dominant_lc,flag_status,notes
+1,1,usda_me,usda_me,ME,5.3,Atlantic Highlands,BDF,FLAGGED,ALS p90 - rh_98 = -8.28 m; Feb 2015 leaf-off; likely snow cover
+2,2,nasa_howland,nasa_howland,ME,8.1,Mixed Wood Plains,ENF,FLAGGED,offset -7.92 m; NASA acquisition Oct 2013
+3,3,neon_sawb,neon_sawb,MA,8.1,Mixed Wood Plains,BDF,FLAGGED,offset -15.68 m; 2013 NEON predates pipeline standardization
+4,4,neon_harv2019,neon_harv2019,MA,8.1,Mixed Wood Plains,BDF,ok,
+5,5,usda_sc,usda_sc,SC,8.5,SE Coastal Plains,ENF,ok,
+6,6,neon_jerc2021,neon_jerc2021,GA,8.3,SE USA Plains,ENF,ok,
+7,7,neon_tall2021,neon_tall2021,AL,8.3,SE USA Plains,ENF,ok,
+8,8,neon_dela2021,neon_dela2021,AL,8.3,SE USA Plains,IWL,ok,
+9,9,neon_leno2021,neon_leno2021,AL,8.3,SE USA Plains,ENF,ok,
+10,10,neon_clbj2022,neon_clbj2022,TX,9.4,SC Semiarid Prairies,BDF,DTM_excluded,+143 m vertical datum offset; CHM retained
+11,11,neon_konz2020,neon_konz2020,KS,9.4,SC Semiarid Prairies,BDF,ok,
+12,12,neon_stei2022,neon_stei2022,WI,5.2,Mixed Wood Shield,BDF,ok,
+13,13,neon_unde2022,neon_unde2022,MN,5.2,Mixed Wood Shield,BDF,ok,
+14,14,neon_steicheq2022,neon_steicheq2022,MN,5.2,Mixed Wood Shield,BDF,ok,
+15,15,neon_wood2021,neon_wood2021,ND,9.3,WC Semiarid Prairies,GRS,ok,Largely grassland; only 729 forest-filtered footprints
+16,17,neon_ster2022,neon_ster2022,CO,9.4,SC Semiarid Prairies,GRS,ok,Effectively grassland (10 forest-filtered footprints)
+17,18,neon_cper2021,neon_cper2021,CO,9.4,SC Semiarid Prairies,GRS,ok,Effectively grassland (7 forest-filtered footprints)
+18,19,ltbmu_20180710,ltbmu_20180710,CA,6.2,Western Cordillera,ENF,ok,High slope (slope IQR 10-23 deg)
+19,20,neon_sjer,neon_sjer,CA,11.1,Mediterranean CA,GRS,ok,
+,16,neon_nogp,neon_nogp2021,ND,9.3,WC Semiarid Prairies,,OMITTED,No surviving footprints after QC
+,21,nasa_sonoma_whole,,CA,11.1,Mediterranean CA,,OMITTED,No ALS reference available

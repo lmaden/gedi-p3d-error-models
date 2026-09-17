@@ -1,0 +1,19 @@
+Category,Variable,Description,Units,Source,Mean,SD,Min,Max
+Terrain,slope_mean,Mean terrain slope,degrees,3DEP DTM,4.99,5.23,0.00,88.46
+Terrain,slope_sd,Slope variability (SD),degrees,3DEP DTM,2.27,1.89,0.00,40.82
+Terrain,aspect_sin_mean,Aspect sine (E-W orientation),unitless,3DEP DTM,0.00,0.44,-1.00,1.00
+Terrain,aspect_cos_mean,Aspect cosine (N-S orientation),unitless,3DEP DTM,-0.01,0.43,-1.00,1.00
+Vegetation,wsci,Waveform structural complexity index,unitless,GEDI L4C,9.21,1.03,3.86,11.33
+Vegetation,rh_98,Relative height 98th percentile,m,GEDI L2A,13.75,8.03,-0.52,142.18
+Vegetation,cover,Canopy cover fraction,proportion,GEDI L2B,0.37,0.29,0.00,1.00
+Vegetation,lc_l1_code,Land-cover class (16 GLC-FCS30 classes),categorical,GLC-FCS30,-,-,-,-
+Acquisition,meta_off_nadir_avg,Off-nadir viewing angle,degrees,P3D metadata,24.34,3.13,17.41,33.26
+Acquisition,meta_sun_elev_avg,Sun elevation angle,degrees,P3D metadata,46.24,5.00,31.25,60.38
+Acquisition,meta_az_concentration,"Azimuth concentration (mean resultant length of the contributing images’ viewing azimuths; 0 = evenly spread, 1 = one direction)",unitless,P3D metadata,0.28,0.13,0.00,0.75
+Acquisition,view_az_sin,Viewing azimuth sine component,unitless,P3D metadata,-0.53,0.58,-1.00,1.00
+Acquisition,view_az_cos,Viewing azimuth cosine component,unitless,P3D metadata,0.38,0.48,-1.00,1.00
+Acquisition,meta_stereo_ratio,Stereo ratio (fraction of contributing images acquired as in-track stereo),proportion,P3D metadata,0.30,0.13,0.02,0.73
+Acquisition,fwdrev,Forward-reverse ratio (fraction of forward-looking minus reverse-looking contributing images),unitless,P3D metadata,0.36,0.18,-0.36,0.86
+Acquisition,meta_abs_geoacc_avg,Absolute geoaccuracy,m,P3D metadata,10.04,1.82,4.03,20.06
+Acquisition,meta_rel_geoacc_avg,Relative geoaccuracy,m,P3D metadata,2.58,0.31,2.23,3.65
+Acquisition,meta_leaf_on_ratio,Leaf-on fraction (fraction of contributing images acquired in leaf-on season),proportion,P3D metadata,0.65,0.10,0.29,0.91

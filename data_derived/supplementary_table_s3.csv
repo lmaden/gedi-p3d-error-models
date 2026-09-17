@@ -1,0 +1,10 @@
+Parameter,Prior,Justification
+β₀ (Intercept),"Normal(0, 10)",Weakly informative; allows bias up to ±20 m at 95% prior probability
+β (Fixed effects),"Normal(0, 2)",Weakly informative; standardized predictors expected to have moderate effects
+ν (Degrees of freedom),"Gamma(2, 0.1)",Concentrates mass on ν > 2 ensuring finite variance; allows heavy tails
+"σsite, σeco, σlc (group intercept and slope SDs)","Student-t(3, 0, 2)",Half-t prior recommended for variance components with few groups
+"ση,site, ση,lc (variance submodel)","Student-t(3, 0, c)","brms default; scale c = 4.4 (CHM), 2.5 (DTM), set to max(2.5, sd(response))"
+sds (Spline coefficients),"Normal(0, 1.5)",Regularizes smooth term complexity
+γ₀ (Baseline log-scale),"Student-t(3, 0, 5)",Weakly informative for log-scale intercept
+γ₁ (Slope effect on σ),"Normal(0, 1)",Weakly informative; expects moderate heteroscedasticity
+ρ (Correlation matrices),"LKJ(2) (DTM); brms default, LKJ(1) (CHM)",Weakly informative prior for random effect correlations

@@ -1,0 +1,174 @@
+nohup: ignoring input
+
+============================================================================================ 
+##  STEP 0 -- WRITE-LOCATION GUARD 
+============================================================================================ 
+tempdir():  /gpfs/data1/vclgp/lmaden/Rtmp/RtmpOHKayD 
+OK
+
+============================================================================================ 
+##  STEP 1 -- DATA AND THE TILE KEY 
+============================================================================================ 
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  2743092 146.5    5478437 292.6  2988510 159.7
+Vcells 20999084 160.3   62769892 478.9 71340801 544.3
+
+NA share of the 'site-constant' columns (expect 1.000 = empty, not constant):
+  meta_abs_geoacc_avg      1.000
+  meta_az_concentration    1.000
+  meta_tot_ct              1.000
+  rh_98                    1.000
+
+16-site CHM analysis rows after NA drop: 124,966 (published fit used 124,966)
+
+GATE: geometry-six partition == modeled-ten partition on 16-site data: PASS 
+tile levels, 16-site CHM: 14,706 
+
+PILOT subset: 24,159 rows | 7 sites | 5 ecoregions | 10 land-cover | 2,099 tiles
+footprints per tile: median 3 | p90 25 | max 462
+
+============================================================================================ 
+##  FIT -- tile 
+============================================================================================ 
+Start sampling
+Running MCMC with 2 parallel chains, with 8 thread(s) per chain...
+
+Chain 1 Iteration:   1 / 1000 [  0%]  (Warmup) 
+Chain 2 Iteration:   1 / 1000 [  0%]  (Warmup) 
+Chain 1 Iteration:  50 / 1000 [  5%]  (Warmup) 
+Chain 2 Iteration:  50 / 1000 [  5%]  (Warmup) 
+Chain 2 Iteration: 100 / 1000 [ 10%]  (Warmup) 
+Chain 1 Iteration: 100 / 1000 [ 10%]  (Warmup) 
+Chain 2 Iteration: 150 / 1000 [ 15%]  (Warmup) 
+Chain 1 Iteration: 150 / 1000 [ 15%]  (Warmup) 
+Chain 1 Iteration: 200 / 1000 [ 20%]  (Warmup) 
+Chain 2 Iteration: 200 / 1000 [ 20%]  (Warmup) 
+Chain 1 Iteration: 250 / 1000 [ 25%]  (Warmup) 
+Chain 2 Iteration: 250 / 1000 [ 25%]  (Warmup) 
+Chain 1 Iteration: 300 / 1000 [ 30%]  (Warmup) 
+Chain 2 Iteration: 300 / 1000 [ 30%]  (Warmup) 
+Chain 1 Iteration: 350 / 1000 [ 35%]  (Warmup) 
+Chain 2 Iteration: 350 / 1000 [ 35%]  (Warmup) 
+Chain 1 Iteration: 400 / 1000 [ 40%]  (Warmup) 
+Chain 2 Iteration: 400 / 1000 [ 40%]  (Warmup) 
+Chain 1 Iteration: 450 / 1000 [ 45%]  (Warmup) 
+Chain 2 Iteration: 450 / 1000 [ 45%]  (Warmup) 
+Chain 1 Iteration: 500 / 1000 [ 50%]  (Warmup) 
+Chain 1 Iteration: 501 / 1000 [ 50%]  (Sampling) 
+Chain 2 Iteration: 500 / 1000 [ 50%]  (Warmup) 
+Chain 2 Iteration: 501 / 1000 [ 50%]  (Sampling) 
+Chain 1 Iteration: 550 / 1000 [ 55%]  (Sampling) 
+Chain 2 Iteration: 550 / 1000 [ 55%]  (Sampling) 
+Chain 1 Iteration: 600 / 1000 [ 60%]  (Sampling) 
+Chain 2 Iteration: 600 / 1000 [ 60%]  (Sampling) 
+Chain 1 Iteration: 650 / 1000 [ 65%]  (Sampling) 
+Chain 2 Iteration: 650 / 1000 [ 65%]  (Sampling) 
+Chain 1 Iteration: 700 / 1000 [ 70%]  (Sampling) 
+Chain 2 Iteration: 700 / 1000 [ 70%]  (Sampling) 
+Chain 1 Iteration: 750 / 1000 [ 75%]  (Sampling) 
+Chain 2 Iteration: 750 / 1000 [ 75%]  (Sampling) 
+Chain 1 Iteration: 800 / 1000 [ 80%]  (Sampling) 
+Chain 2 Iteration: 800 / 1000 [ 80%]  (Sampling) 
+Chain 1 Iteration: 850 / 1000 [ 85%]  (Sampling) 
+Chain 2 Iteration: 850 / 1000 [ 85%]  (Sampling) 
+Chain 1 Iteration: 900 / 1000 [ 90%]  (Sampling) 
+Chain 2 Iteration: 900 / 1000 [ 90%]  (Sampling) 
+Chain 1 Iteration: 950 / 1000 [ 95%]  (Sampling) 
+Chain 2 Iteration: 950 / 1000 [ 95%]  (Sampling) 
+Chain 1 Iteration: 1000 / 1000 [100%]  (Sampling) 
+Chain 1 finished in 522.7 seconds.
+Chain 2 Iteration: 1000 / 1000 [100%]  (Sampling) 
+Chain 2 finished in 543.7 seconds.
+
+Both chains finished successfully.
+Mean chain execution time: 533.2 seconds.
+Total execution time: 544.4 seconds.
+
+Loading required namespace: rstan
+
+tile fit: 0.18 hours
+  divergences 0 | max Rhat 1.0312 | min ESS ratio 0.097
+  mean treedepth 9.00 | % at ceiling(12) 0.00%
+
+============================================================================================ 
+##  FIT -- control 
+============================================================================================ 
+Start sampling
+Running MCMC with 2 parallel chains, with 8 thread(s) per chain...
+
+Chain 1 Iteration:   1 / 1000 [  0%]  (Warmup) 
+Chain 2 Iteration:   1 / 1000 [  0%]  (Warmup) 
+Chain 2 Iteration:  50 / 1000 [  5%]  (Warmup) 
+Chain 1 Iteration:  50 / 1000 [  5%]  (Warmup) 
+Chain 2 Iteration: 100 / 1000 [ 10%]  (Warmup) 
+Chain 1 Iteration: 100 / 1000 [ 10%]  (Warmup) 
+Chain 2 Iteration: 150 / 1000 [ 15%]  (Warmup) 
+Chain 1 Iteration: 150 / 1000 [ 15%]  (Warmup) 
+Chain 1 Iteration: 200 / 1000 [ 20%]  (Warmup) 
+Chain 2 Iteration: 200 / 1000 [ 20%]  (Warmup) 
+Chain 1 Iteration: 250 / 1000 [ 25%]  (Warmup) 
+Chain 2 Iteration: 250 / 1000 [ 25%]  (Warmup) 
+Chain 1 Iteration: 300 / 1000 [ 30%]  (Warmup) 
+Chain 2 Iteration: 300 / 1000 [ 30%]  (Warmup) 
+Chain 1 Iteration: 350 / 1000 [ 35%]  (Warmup) 
+Chain 2 Iteration: 350 / 1000 [ 35%]  (Warmup) 
+Chain 1 Iteration: 400 / 1000 [ 40%]  (Warmup) 
+Chain 2 Iteration: 400 / 1000 [ 40%]  (Warmup) 
+Chain 1 Iteration: 450 / 1000 [ 45%]  (Warmup) 
+Chain 2 Iteration: 450 / 1000 [ 45%]  (Warmup) 
+Chain 2 Iteration: 500 / 1000 [ 50%]  (Warmup) 
+Chain 2 Iteration: 501 / 1000 [ 50%]  (Sampling) 
+Chain 1 Iteration: 500 / 1000 [ 50%]  (Warmup) 
+Chain 1 Iteration: 501 / 1000 [ 50%]  (Sampling) 
+Chain 2 Iteration: 550 / 1000 [ 55%]  (Sampling) 
+Chain 1 Iteration: 550 / 1000 [ 55%]  (Sampling) 
+Chain 2 Iteration: 600 / 1000 [ 60%]  (Sampling) 
+Chain 1 Iteration: 600 / 1000 [ 60%]  (Sampling) 
+Chain 2 Iteration: 650 / 1000 [ 65%]  (Sampling) 
+Chain 1 Iteration: 650 / 1000 [ 65%]  (Sampling) 
+Chain 2 Iteration: 700 / 1000 [ 70%]  (Sampling) 
+Chain 1 Iteration: 700 / 1000 [ 70%]  (Sampling) 
+Chain 2 Iteration: 750 / 1000 [ 75%]  (Sampling) 
+Chain 1 Iteration: 750 / 1000 [ 75%]  (Sampling) 
+Chain 2 Iteration: 800 / 1000 [ 80%]  (Sampling) 
+Chain 2 Iteration: 850 / 1000 [ 85%]  (Sampling) 
+Chain 1 Iteration: 800 / 1000 [ 80%]  (Sampling) 
+Chain 2 Iteration: 900 / 1000 [ 90%]  (Sampling) 
+Chain 1 Iteration: 850 / 1000 [ 85%]  (Sampling) 
+Chain 2 Iteration: 950 / 1000 [ 95%]  (Sampling) 
+Chain 1 Iteration: 900 / 1000 [ 90%]  (Sampling) 
+Chain 2 Iteration: 1000 / 1000 [100%]  (Sampling) 
+Chain 2 finished in 633.3 seconds.
+Chain 1 Iteration: 950 / 1000 [ 95%]  (Sampling) 
+Chain 1 Iteration: 1000 / 1000 [100%]  (Sampling) 
+Chain 1 finished in 690.9 seconds.
+
+Both chains finished successfully.
+Mean chain execution time: 662.1 seconds.
+Total execution time: 691.6 seconds.
+
+
+control fit: 0.20 hours
+  divergences 0 | max Rhat 1.0225 | min ESS ratio 0.160
+  mean treedepth 9.73 | % at ceiling(12) 0.00%
+
+============================================================================================ 
+##  COMPARISON -- what the tile level does 
+============================================================================================ 
+tile sd posterior (Intercept):
+          Estimate Est.Error   Q2.5 Q97.5
+Intercept   1.2487    0.0484 1.1611 1.345
+
+acquisition fixed effects: estimate (control -> tile) | posterior SD ratio tile/control
+  meta_offnad_z    +0.006 -> -0.029   | SD x2.01
+  meta_sunel_z     +0.145 -> +0.313   | SD x2.05
+  meta_az_conc_z   -0.013 -> -0.033   | SD x2.44
+  meta_absgeo_z    +0.053 -> +0.049   | SD x2.03
+  view_az_sin_z    +0.015 -> -0.009   | SD x2.02
+  view_az_cos_z    -0.011 -> +0.002   | SD x2.23
+  meta_relgeo_z    -0.066 -> -0.156   | SD x2.01
+  meta_stereo_z    +0.074 -> +0.198   | SD x2.00
+  meta_fwdrev_z    +0.079 -> +0.066   | SD x1.89
+  meta_leafon_z    -0.128 -> -0.219   | SD x1.97
+
+Done. Interpret against plan section 3 (Path A vs B) before launching full refits.

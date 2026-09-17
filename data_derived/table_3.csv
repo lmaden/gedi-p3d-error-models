@@ -1,0 +1,12 @@
+Metric,CHM Error,DTM Error
+n,"249,148","463,044"
+Mean Bias (m),-2.27,+2.48
+Median Bias (m),-1.62,+1.74
+SD (m),4.79,3.51
+NMAD (m),3.33,2.51
+IQR (m),4.61,3.68
+Skewness,-0.71,+0.94
+Kurtosis,5.99,4.08
+MAE (m),3.70,3.00
+RMSE (m),5.30,4.29
+Q95 Error (m),11.75,9.40

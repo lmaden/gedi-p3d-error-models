@@ -1,0 +1,6 @@
+Distance Band,CHM Moran’s I,DTM Moran’s I,N Links (CHM),N Links (DTM)
+0-0.1 km,0.42,0.50,157k,146k
+0.1-0.5 km,0.21,0.24,2.3M,2.1M
+0.5-2 km,0.07,0.08,26M,24M
+2-10 km,<0.01,0.01,197M,177M
+10-50 km,<0.01,<0.01,91M,89M

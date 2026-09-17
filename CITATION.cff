@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code or the derived tables, please cite the paper below."
+title: "Analysis code and derived data for: Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
+authors:
+  - family-names: Madenberg
+    given-names: Levi
+    affiliation: "Department of Geographical Sciences, University of Maryland; Vantor Technologies"
+  - family-names: May
+    given-names: Paul B.
+    affiliation: "Department of Mathematics, South Dakota School of Mines and Technology"
+  - family-names: Tang
+    given-names: Hao
+    affiliation: "Department of Geography, National University of Singapore"
+  - family-names: Pascual
+    given-names: Adrian
+    affiliation: "Department of Geographical Sciences, University of Maryland"
+  - family-names: Dubayah
+    given-names: Ralph
+    affiliation: "Department of Geographical Sciences, University of Maryland"
+version: "1.0.0"
+date-released: "2026-09-14"
+license: MIT
+repository-code: "https://github.com/lmaden/gedi-p3d-error-models"
+preferred-citation:
+  type: article
+  title: "Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
+  authors:
+    - family-names: Madenberg
+      given-names: Levi
+    - family-names: May
+      given-names: Paul B.
+    - family-names: Tang
+      given-names: Hao
+    - family-names: Pascual
+      given-names: Adrian
+    - family-names: Dubayah
+      given-names: Ralph
+  journal: "ISPRS Journal of Photogrammetry and Remote Sensing"
+  year: 2026
+  notes: "Submitted"

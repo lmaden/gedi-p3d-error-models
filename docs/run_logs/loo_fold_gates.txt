@@ -1,0 +1,226 @@
+loo_fold_gates.R -- read-only
+started: 2026-08-17 15:23:19
+
+============================================================================== 
+##  GATE A -- pooled DTM rung-2 RMSE, every plausible recipe 
+============================================================================== 
+18 folds total | 6 substituted by _ad099: 4, 7, 8, 13, 14, 15
+columns -> rung: rung | rmse: rmse | n: n | eco_known: eco_known
+rung levels: 1_oracle_site_known | 2_new_site_eco_lc_known | 3_new_site_new_ecoregion
+
+Which recipe gives 3.362 and which gives 3.363?
+
+  1. n-weighted RMSE, all folds, _ad099 preferred           3.2669   (folds 18, n 202,278)
+  2. n-weighted RMSE, eco_known folds only                  3.3840   (folds 14, n 112,860)
+  3. unweighted mean of per-site RMSE                       3.0027   (folds 18, n 202,278)
+  4. n-weighted RMSE, ORIGINALS ONLY (glob trap)            3.2673   (folds 18, n 202,278)
+  5. sqrt(n-weighted mean MSE), _ad099 preferred            3.3622   (folds 18, n 202,278)
+  6. sqrt(n-weighted mean MSE), ORIGINALS ONLY              3.3628   (folds 18, n 202,278)
+
+Cross-check against checkpoint sec 6.2 (expect 3.003 / 3.362 / 3.383 all-fold):
+  rung 1 oracle,        n-weighted, all folds               2.9422   (folds 18, n 202,278)
+  rung 2 new site,      n-weighted, all folds               3.2669   (folds 18, n 202,278)
+  rung 3 new site+eco,  n-weighted, all folds               3.2813   (folds 18, n 202,278)
+and the 14 valid folds (expect 3.106 / 3.534 / 3.567):
+  rung 1 oracle,        eco_known only                      --
+  rung 2 new site,      eco_known only                      3.3840   (folds 14, n 112,860)
+  rung 3 new site+eco,  eco_known only                      --
+
+Per-fold rung-2 rows used in recipe 1:
+    .site     n     rmse eco_known                            .file
+    <int> <int>    <num>    <lgcl>                           <char>
+ 1:     1 76630 3.300858      TRUE        loo_metrics_dtm_site1.csv
+ 2:     2   514 2.670705      TRUE        loo_metrics_dtm_site2.csv
+ 3:     3  2314 2.373150      TRUE        loo_metrics_dtm_site3.csv
+ 4:     4  4439 7.176234      TRUE  loo_metrics_dtm_site4_ad099.csv
+ 5:     5 71065 3.254447     FALSE        loo_metrics_dtm_site5.csv
+ 6:     6  6255 1.779971      TRUE        loo_metrics_dtm_site6.csv
+ 7:     7  5988 5.110469      TRUE  loo_metrics_dtm_site7_ad099.csv
+ 8:     8  2416 2.152594      TRUE  loo_metrics_dtm_site8_ad099.csv
+ 9:     9  3753 3.031956      TRUE        loo_metrics_dtm_site9.csv
+10:    11  4137 1.948381      TRUE       loo_metrics_dtm_site11.csv
+11:    12  3406 3.356404      TRUE       loo_metrics_dtm_site12.csv
+12:    13  2545 4.480657      TRUE loo_metrics_dtm_site13_ad099.csv
+13:    14   413 2.258120      TRUE loo_metrics_dtm_site14_ad099.csv
+14:    15   488 1.935354     FALSE loo_metrics_dtm_site15_ad099.csv
+15:    17    27 3.125798      TRUE       loo_metrics_dtm_site17.csv
+16:    18    23 1.389710      TRUE       loo_metrics_dtm_site18.csv
+17:    19 16532 2.657923     FALSE       loo_metrics_dtm_site19.csv
+18:    20  1333 2.046345     FALSE       loo_metrics_dtm_site20.csv
+
+============================================================================== 
+##  GATE B -- eco_known derived from scratch, both products 
+============================================================================== 
+CHM analysis sites (16): 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 4, 5, 6, 7, 8, 9
+DTM analysis sites (18): 1, 11, 12, 13, 14, 15, 17, 18, 19, 2, 20, 3, 4, 5, 6, 7, 8, 9
+
+CHM:
+      site n_eco eco_known
+    <char> <int>    <lgcl>
+ 1:      4     2     FALSE
+ 2:      5     3     FALSE
+ 3:     15     2     FALSE
+ 4:     19     1     FALSE
+ 5:     20     1     FALSE
+ 6:      6     1      TRUE
+ 7:      7     1      TRUE
+ 8:      8     1      TRUE
+ 9:      9     1      TRUE
+10:     10     1      TRUE
+11:     11     1      TRUE
+12:     12     1      TRUE
+13:     13     1      TRUE
+14:     14     1      TRUE
+15:     17     1      TRUE
+16:     18     1      TRUE
+                                                 orphan_eco
+                                                     <char>
+ 1:                   ATLANTIC HIGHLANDS; MIXED WOOD PLAINS
+ 2: MISSISSIPPI ALLUVIAL AND SOUTHEAST USA COASTAL PLAINS; 
+ 3:      WEST-CENTRAL SEMIARID PRAIRIES; TEMPERATE PRAIRIES
+ 4:                                      WESTERN CORDILLERA
+ 5:                                MEDITERRANEAN CALIFORNIA
+ 6:                                                        
+ 7:                                                        
+ 8:                                                        
+ 9:                                                        
+10:                                                        
+11:                                                        
+12:                                                        
+13:                                                        
+14:                                                        
+15:                                                        
+16:                                                        
+
+DTM:
+      site n_eco eco_known
+    <char> <int>    <lgcl>
+ 1:      5     3     FALSE
+ 2:     15     2     FALSE
+ 3:     19     1     FALSE
+ 4:     20     1     FALSE
+ 5:      1     2      TRUE
+ 6:      2     1      TRUE
+ 7:      3     1      TRUE
+ 8:      4     2      TRUE
+ 9:      6     1      TRUE
+10:      7     1      TRUE
+11:      8     1      TRUE
+12:      9     1      TRUE
+13:     11     1      TRUE
+14:     12     1      TRUE
+15:     13     1      TRUE
+16:     14     1      TRUE
+17:     17     1      TRUE
+18:     18     1      TRUE
+                                                 orphan_eco
+                                                     <char>
+ 1: MISSISSIPPI ALLUVIAL AND SOUTHEAST USA COASTAL PLAINS; 
+ 2:      TEMPERATE PRAIRIES; WEST-CENTRAL SEMIARID PRAIRIES
+ 3:                                      WESTERN CORDILLERA
+ 4:                                MEDITERRANEAN CALIFORNIA
+ 5:                                                        
+ 6:                                                        
+ 7:                                                        
+ 8:                                                        
+ 9:                                                        
+10:                                                        
+11:                                                        
+12:                                                        
+13:                                                        
+14:                                                        
+15:                                                        
+16:                                                        
+17:                                                        
+18:                                                        
+
+CHM eco_known == FALSE
+  derived : 4, 5, 15, 19, 20
+  recorded: 4, 5, 15, 19, 20
+  MATCH   : TRUE
+
+DTM eco_known == FALSE
+  derived : 5, 15, 19, 20
+  recorded: 5, 15, 19, 20
+  MATCH   : TRUE
+
+-- sec 6.3b's specific claim about site 4 --
+site 4 ecoregions: ATLANTIC HIGHLANDS | MIXED WOOD PLAINS
+  ATLANTIC HIGHLANDS
+    all sites sharing it (19-site view): 1
+    still present in the 16-site CHM: NONE
+    still present in the 18-site DTM: 1
+  MIXED WOOD PLAINS
+    all sites sharing it (19-site view): 1, 2, 3
+    still present in the 16-site CHM: NONE
+    still present in the 18-site DTM: 1, 2, 3
+
+============================================================================== 
+##  GATE C -- ecoregion inventory (review sec 5 item 5: nine vs ten) 
+============================================================================== 
+
+16-site CHM -- 11 distinct ecoregion levels
+                                                      eco n_sites  blank
+                                                   <char>   <int> <lgcl>
+ 1:                               SOUTHEASTERN USA PLAINS       5  FALSE
+ 2:                       SOUTH CENTRAL SEMIARID PRAIRIES       4  FALSE
+ 3:                                     MIXED WOOD SHIELD       3  FALSE
+ 4:                                                             1   TRUE
+ 5:                                    ATLANTIC HIGHLANDS       1  FALSE
+ 6:                              MEDITERRANEAN CALIFORNIA       1  FALSE
+ 7: MISSISSIPPI ALLUVIAL AND SOUTHEAST USA COASTAL PLAINS       1  FALSE
+ 8:                                     MIXED WOOD PLAINS       1  FALSE
+ 9:                                    TEMPERATE PRAIRIES       1  FALSE
+10:                        WEST-CENTRAL SEMIARID PRAIRIES       1  FALSE
+11:                                    WESTERN CORDILLERA       1  FALSE
+  !! 1 level(s) with a blank/NA label. Raw value(s):
+[[1]]
+[[1]]$value
+[1] ""
+
+[[1]]$is_na
+[1] FALSE
+
+[[1]]$nchar
+[1] 0
+
+
+  sites carrying it: 5
+  NAMED (non-blank) levels: 10
+
+18-site DTM -- 11 distinct ecoregion levels
+                                                      eco n_sites  blank
+                                                   <char>   <int> <lgcl>
+ 1:                               SOUTHEASTERN USA PLAINS       5  FALSE
+ 2:                                     MIXED WOOD PLAINS       4  FALSE
+ 3:                                     MIXED WOOD SHIELD       3  FALSE
+ 4:                       SOUTH CENTRAL SEMIARID PRAIRIES       3  FALSE
+ 5:                                    ATLANTIC HIGHLANDS       2  FALSE
+ 6:                                                             1   TRUE
+ 7:                              MEDITERRANEAN CALIFORNIA       1  FALSE
+ 8: MISSISSIPPI ALLUVIAL AND SOUTHEAST USA COASTAL PLAINS       1  FALSE
+ 9:                                    TEMPERATE PRAIRIES       1  FALSE
+10:                        WEST-CENTRAL SEMIARID PRAIRIES       1  FALSE
+11:                                    WESTERN CORDILLERA       1  FALSE
+  !! 1 level(s) with a blank/NA label. Raw value(s):
+[[1]]
+[[1]]$value
+[1] ""
+
+[[1]]$is_na
+[1] FALSE
+
+[[1]]$nchar
+[1] 0
+
+
+  sites carrying it: 5
+  NAMED (non-blank) levels: 10
+
+Manuscript says nine Level II in four places and ten in sec 4.4.
+The NAMED count above is the number to reconcile against.
+
+============================================================================== 
+##  DONE -- nothing was written except this log 
+============================================================================== 
+finished: 2026-08-17 15:23:26

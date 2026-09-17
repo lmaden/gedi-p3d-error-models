@@ -1,0 +1,24 @@
+# fitted model objects, checkpoints and raw data are never committed
+*.rds
+*.RData
+*.Rhistory
+*.csv.gz
+*.tif
+*.tiff
+*.h5
+*.laz
+*.las
+*.gpkg
+*.shp
+*.parquet
+checkpoints/
+models/
+data/
+logs/
+__pycache__/
+.ipynb_checkpoints/
+.Rproj.user/
+*.log
+!docs/run_logs/*.log
+Thumbs.db
+desktop.ini

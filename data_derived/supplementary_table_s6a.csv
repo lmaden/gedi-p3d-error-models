@@ -1,0 +1,15 @@
+Product,Grouping Level,Parameter,n levels,Min (m),Max (m),Range (m),SD (m)
+CHM (16-site),Site,Intercept,16,-2.19,+2.09,4.28,1.28
+CHM (16-site),Site,σ Intercept,16,-0.92,+0.86,1.78,0.64
+DTM (18-site),Site,Intercept,18,-2.20,+3.79,5.99,1.36
+DTM (18-site),Site,σ Intercept,18,-0.62,+0.86,1.48,0.42
+CHM (16-site),Ecoregion,Intercept,11,-2.87,+0.82,3.69,1.01
+CHM (16-site),Ecoregion,Slope (slope_mean_z),11,-0.81,+0.22,1.03,0.29
+DTM (18-site),Ecoregion,Intercept,11,-0.62,+0.39,1.02,0.37
+DTM (18-site),Ecoregion,Slope (slope_mean_z),11,-0.32,+0.59,0.92,0.26
+CHM (16-site),Land cover,Intercept,16,-0.43,+0.51,0.95,0.24
+CHM (16-site),Land cover,σ Intercept,16,-0.32,+0.24,0.56,0.19
+CHM (16-site),Land cover,Slope (wsci_z),16,-0.04,+0.02,0.06,0.01
+DTM (18-site),Land cover,Intercept,16,-0.39,+0.53,0.92,0.25
+DTM (18-site),Land cover,σ Intercept,16,-0.26,+0.17,0.43,0.12
+DTM (18-site),Land cover,Slope (wsci_z),16,-0.03,+0.01,0.04,0.01

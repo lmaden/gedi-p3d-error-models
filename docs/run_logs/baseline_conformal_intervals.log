@@ -1,0 +1,169 @@
+nohup: ignoring input
+
+######## CHM ########
+  DETECTED eco: ecoregion | lc: lc_l1_code | lin: rh_98_z slope_mean_z cover_z lc_l1_code | n preds: 19 
+  folds this run: 4 5 6 7 8 9 10 11 12 13 14 15 17 18 19 20 
+  preds chm site 4   n=4418   done
+  preds chm site 5   n=70342  done
+  preds chm site 6   n=6242   done
+  preds chm site 7   n=5966   done
+  preds chm site 8   n=2373   done
+  preds chm site 9   n=3741   done
+  preds chm site 10  n=3206   done
+  preds chm site 11  n=4116   done
+  preds chm site 12  n=3368   done
+  preds chm site 13  n=2523   done
+  preds chm site 14  n=407    done
+  preds chm site 15  n=484    done
+  preds chm site 17  n=27     done
+  preds chm site 18  n=23     done
+  preds chm site 19  n=16402  done
+  preds chm site 20  n=1328   done
+
+-- RMSE REPRODUCTION CHECK, max abs diff vs saved --
+site_offset      global   lin_blind    rf_blind   lin_aware    rf_aware 
+   4.88e-15    4.88e-15    4.88e-15    5.33e-15    4.44e-15    4.44e-15 
+  ALL MATCH (< 1e-6): TRUE 
+
+  score chm site 4   done
+  score chm site 5   done
+  score chm site 6   done
+  score chm site 7   done
+  score chm site 8   done
+  score chm site 9   done
+  score chm site 10  done
+  score chm site 11  done
+  score chm site 12  done
+  score chm site 13  done
+  score chm site 14  done
+  score chm site 15  done
+  score chm site 17  done
+  score chm site 18  done
+  score chm site 19  done
+  score chm site 20  done
+
+-- CHM | pool=eq_ctr | basis=all | folds=16 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 124966 4.485  0.000 3.113 2.366 0.355 0.858 0.919  11.840
+2:      global 124966 4.792 -0.356 3.496 2.571 0.402 0.823 0.925  13.223
+3:   lin_blind 124966 4.830 -0.225 3.451 2.571 0.366 0.843 0.921  13.151
+4:    rf_blind 124966 5.003 -0.286 3.605 2.675 0.386 0.827 0.916  13.407
+5:   lin_aware 124966 4.895 -0.065 3.501 2.611 0.379 0.845 0.922  13.362
+6:    rf_aware 124966 5.049 -0.107 3.618 2.695 0.373 0.837 0.920  13.628
+
+-- CHM | pool=eq_ctr | basis=valid | folds=11 --
+      baseline     n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char> <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 31992 4.111  0.000 2.917 2.216 0.372 0.868 0.927  11.894
+2:      global 31992 4.553  0.479 3.249 2.513 0.460 0.864 0.932  13.469
+3:   lin_blind 31992 4.527 -0.160 3.298 2.471 0.382 0.865 0.929  13.265
+4:    rf_blind 31992 4.507 -0.013 3.269 2.461 0.425 0.869 0.933  13.621
+5:   lin_aware 31992 4.690  0.210 3.458 2.591 0.368 0.857 0.926  13.452
+6:    rf_aware 31992 4.539 -0.054 3.297 2.479 0.415 0.867 0.933  13.790
+
+-- CHM | pool=eq_raw | basis=all | folds=16 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 124966 4.485  0.008 3.112 2.365 0.355 0.859 0.919  11.840
+2:      global 124966 4.941 -1.099 3.761 2.690 0.352 0.781 0.911  13.223
+3:   lin_blind 124966 4.879 -0.547 3.544 2.615 0.353 0.831 0.916  13.151
+4:    rf_blind 124966 5.069 -0.655 3.717 2.729 0.368 0.810 0.909  13.407
+5:   lin_aware 124966 4.969 -0.657 3.653 2.679 0.356 0.824 0.915  13.362
+6:    rf_aware 124966 5.104 -0.478 3.716 2.741 0.357 0.823 0.915  13.628
+
+-- CHM | pool=eq_raw | basis=valid | folds=11 --
+      baseline     n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char> <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 31992 4.111  0.007 2.917 2.216 0.372 0.868 0.927  11.894
+2:      global 31992 4.587 -0.208 3.353 2.489 0.425 0.856 0.924  13.469
+3:   lin_blind 31992 4.591 -0.479 3.386 2.505 0.368 0.856 0.925  13.265
+4:    rf_blind 31992 4.571 -0.364 3.350 2.486 0.407 0.862 0.928  13.621
+5:   lin_aware 31992 4.763 -0.365 3.567 2.628 0.346 0.846 0.919  13.452
+6:    rf_aware 31992 4.615 -0.422 3.390 2.514 0.393 0.858 0.927  13.790
+
+######## DTM ########
+  DETECTED eco: ecoregion | lc: lc_l1_code | lin: rh_98_z slope_mean_z cover_z lc_l1_code | n preds: 19 
+  folds this run: 1 2 3 4 5 6 7 8 9 11 12 13 14 15 17 18 19 20 
+  preds dtm site 1   n=76630  done
+  preds dtm site 2   n=514    done
+  preds dtm site 3   n=2314   done
+  preds dtm site 4   n=4439   done
+  preds dtm site 5   n=71065  done
+  preds dtm site 6   n=6255   done
+  preds dtm site 7   n=5988   done
+  preds dtm site 8   n=2416   done
+  preds dtm site 9   n=3753   done
+  preds dtm site 11  n=4137   done
+  preds dtm site 12  n=3406   done
+  preds dtm site 13  n=2545   done
+  preds dtm site 14  n=413    done
+  preds dtm site 15  n=488    done
+  preds dtm site 17  n=27     done
+  preds dtm site 18  n=23     done
+  preds dtm site 19  n=16532  done
+  preds dtm site 20  n=1333   done
+
+-- RMSE REPRODUCTION CHECK, max abs diff vs saved --
+site_offset      global   lin_blind    rf_blind   lin_aware    rf_aware 
+   4.44e-15    4.88e-15    4.44e-15    5.33e-15    5.33e-15    4.88e-15 
+  ALL MATCH (< 1e-6): TRUE 
+
+  score dtm site 1   done
+  score dtm site 2   done
+  score dtm site 3   done
+  score dtm site 4   done
+  score dtm site 5   done
+  score dtm site 6   done
+  score dtm site 7   done
+  score dtm site 8   done
+  score dtm site 9   done
+  score dtm site 11  done
+  score dtm site 12  done
+  score dtm site 13  done
+  score dtm site 14  done
+  score dtm site 15  done
+  score dtm site 17  done
+  score dtm site 18  done
+  score dtm site 19  done
+  score dtm site 20  done
+
+-- DTM | pool=eq_ctr | basis=all | folds=18 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 202278 3.310  0.000 2.406 1.779 0.309 0.875 0.939   9.296
+2:      global 202278 3.434 -0.062 2.509 1.795 0.430 0.882 0.935  10.325
+3:   lin_blind 202278 3.379  0.093 2.456 1.792 0.416 0.875 0.935  10.245
+4:    rf_blind 202278 3.259 -0.100 2.340 1.719 0.469 0.900 0.950  10.552
+5:   lin_aware 202278 3.988  1.370 3.067 2.199 0.365 0.758 0.838  10.412
+6:    rf_aware 202278 3.506  0.813 2.649 1.872 0.408 0.848 0.914  10.536
+
+-- DTM | pool=eq_ctr | basis=valid | folds=14 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 112860 3.439  0.000 2.524 1.884 0.305 0.842 0.925   9.210
+2:      global 112860 3.591 -0.080 2.657 1.924 0.401 0.851 0.912  10.302
+3:   lin_blind 112860 3.561  0.451 2.687 1.934 0.365 0.836 0.912  10.189
+4:    rf_blind 112860 3.429 -0.030 2.529 1.852 0.421 0.874 0.935  10.515
+5:   lin_aware 112860 4.575  2.328 3.738 2.678 0.255 0.627 0.735  10.276
+6:    rf_aware 112860 3.772  1.056 2.897 2.065 0.372 0.795 0.875  10.486
+
+-- DTM | pool=eq_raw | basis=all | folds=18 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 202278 3.310  0.000 2.406 1.779 0.309 0.875 0.939   9.296
+2:      global 202278 3.553 -0.857 2.452 1.891 0.491 0.898 0.942  10.325
+3:   lin_blind 202278 3.440 -0.542 2.432 1.836 0.425 0.886 0.940  10.245
+4:    rf_blind 202278 3.373 -0.814 2.345 1.801 0.469 0.904 0.951  10.552
+5:   lin_aware 202278 3.887  0.796 2.923 2.129 0.394 0.783 0.859  10.412
+6:    rf_aware 202278 3.438  0.177 2.499 1.826 0.444 0.871 0.928  10.536
+
+-- DTM | pool=eq_raw | basis=valid | folds=14 --
+      baseline      n  rmse   bias   mae  crps cov50 cov90 cov95 width90
+        <char>  <int> <num>  <num> <num> <num> <num> <num> <num>   <num>
+1: site_offset 112860 3.439  0.000 2.524 1.884 0.305 0.842 0.925   9.210
+2:      global 112860 3.712 -0.876 2.627 2.019 0.442 0.874 0.926  10.302
+3:   lin_blind 112860 3.555 -0.163 2.604 1.924 0.386 0.858 0.924  10.189
+4:    rf_blind 112860 3.527 -0.739 2.538 1.923 0.419 0.884 0.940  10.515
+5:   lin_aware 112860 4.393  1.810 3.532 2.531 0.279 0.668 0.775  10.276
+6:    rf_aware 112860 3.675  0.435 2.741 1.997 0.401 0.827 0.898  10.486

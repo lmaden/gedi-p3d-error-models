@@ -1,0 +1,20 @@
+# Full interactive session setup
+source("analysis_utils.R")
+source("analysis_config.R")
+source("run_interactive.R")
+
+# Run pipeline
+source("section_00_setup.R")
+source("section_01_ingest.R")
+source("section_02_qc.R")
+source("section_03_eda_FIXED2.R")
+source("section_04_terrain_lc.R")
+source("section_05_metadata.R")
+source("section_06_collinearity.R")
+source("section_07_summaries.R")
+source("section_08_model_prep.R")
+source("section_09_models_stage1_FIXED.R")
+source("section_10_models_stage2_FIXED.R")
+source("section_11_diagnostics.R")
+source("section_12_spatial_FIXED.R")
+source("section_13_summary.R")

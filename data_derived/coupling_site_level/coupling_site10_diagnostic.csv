@@ -1,0 +1,6 @@
+quantity,mean,lo,hi,mean_label
+Site 10 RE intercept (Track B),0.990287834306548,-0.3154890545,2.318684295,
+Track B sample sd over 16 sites' RE intercepts,1.41660334447512,1.16393321016777,1.76180930781758,
+Track B sample sd over 15 sites' RE intercepts (Site 10 dropped),1.43398279693743,1.19366051473572,1.76197284333204,
+Implied sigma_site change attributable to Site 10 alone (mean-of-draws diff),-0.0173794524623113,-0.0495695121322253,0.0351782987183769,
+NOTE,,,,"Sample SD over draws is NOT equal to the model's sd_site hyperparameter; this gives an empirical-Bayes-like proxy for the per-site spread, suitable for bounding the Site 10 effect, not for replacing a refit."
