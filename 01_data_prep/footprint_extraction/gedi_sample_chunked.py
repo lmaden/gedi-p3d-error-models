@@ -53,8 +53,8 @@ from helper_speed import (
 # ---------------------------------------------------------------------
 os.environ.setdefault("GDAL_CACHEMAX", "2048")  # MB
 
-base_gedi_dir = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites")
-eco_path      = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\general\na_cec_eco_l2\NA_CEC_Eco_Level2.shp")
+base_gedi_dir = Path(r"<LOCAL_DATA_ROOT>\gedi\sites")
+eco_path      = Path(r"<LOCAL_DATA_ROOT>\general\na_cec_eco_l2\NA_CEC_Eco_Level2.shp")
 
 # Drive paths - CORRECTED for your setup
 slope_base    = Path(r"E:\slope")
@@ -63,7 +63,7 @@ dep_base      = Path(r"E:\3dep")
 als_chm_base  = Path(r"E:\chms")
 mhrsi_base    = Path(r"F:\p3d")
 
-OUTPUT_CSV = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\sampled_data_FINAL.csv")
+OUTPUT_CSV = Path(r"<LOCAL_DATA_ROOT>\sampled_data_FINAL.csv")
 META_JSON  = OUTPUT_CSV.with_suffix(".json")
 
 # Footprint radius & controls

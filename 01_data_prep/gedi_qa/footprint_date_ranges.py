@@ -75,10 +75,10 @@ def process_footprint(site_num, input_path, output_base_path):
 
 def main():
     # Path to footprint geopackages
-    input_path = r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\sites"
+    input_path = r"<LOCAL_DATA_ROOT>\sites"
     
     # Output path (same as GEDI outputs)
-    output_base_path = r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites"
+    output_base_path = r"<LOCAL_DATA_ROOT>\gedi\sites"
     
     print("=" * 70)
     print("Image Footprint Date Range Extractor")

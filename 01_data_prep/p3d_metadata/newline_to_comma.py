@@ -2,7 +2,7 @@
 from pathlib import Path
 
 # Set your input directory (use a raw string on Windows to avoid backslash escapes)
-INPUT_DIR = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\CATIDs_VRIC-141315")
+INPUT_DIR = Path(r"<LOCAL_DATA_ROOT>\CATIDs_VRIC-141315")
 
 def convert_file(in_path: Path) -> int:
     """Read newline-separated IDs and write a single-line, comma-separated file.

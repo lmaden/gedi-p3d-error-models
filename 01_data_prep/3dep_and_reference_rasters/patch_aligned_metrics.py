@@ -28,7 +28,7 @@ import sys
 # =============================================================================
 
 # Input CSVs (old buggy versions)
-BUGGY_CSV_DIR = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\buggy_csvs")
+BUGGY_CSV_DIR = Path(r"<LOCAL_DATA_ROOT>\buggy_csvs")
 INPUT_SITE_1 = BUGGY_CSV_DIR / "site_01_enriched.csv"
 INPUT_SITE_5 = BUGGY_CSV_DIR / "site_05_enriched.csv"
 
@@ -37,7 +37,7 @@ OUTPUT_SITE_1 = BUGGY_CSV_DIR / "site_01_enriched_FIXED.csv"
 OUTPUT_SITE_5 = BUGGY_CSV_DIR / "site_05_enriched_FIXED.csv"
 
 # GEDI files location
-GEDI_BASE = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites")
+GEDI_BASE = Path(r"<LOCAL_DATA_ROOT>\gedi\sites")
 
 # Raster data directories
 P3D_BASE = Path(r"E:\p3d")

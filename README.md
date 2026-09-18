@@ -1,5 +1,7 @@
 # Analysis code and derived data for "Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22831703.svg)](https://doi.org/10.5281/zenodo.22831703)
+
 Levi Madenberg, Paul B. May, Hao Tang, Adrian Pascual, Ralph Dubayah.
 Submitted to *ISPRS Journal of Photogrammetry and Remote Sensing*, September 2026.
 Corresponding author: Levi Madenberg (lmadenbe@umd.edu), Department of Geographical Sciences, University of Maryland.
@@ -55,6 +57,9 @@ placeholder.
 
 ## Reproducibility notes and known gaps
 
+The data-preparation scripts under `01_data_prep/` name their input directories with the placeholder
+`<LOCAL_DATA_ROOT>`; substitute the directory that holds the inputs described above.
+
 - Seeds: `set.seed(2025)` in `02_model_fitting/section_08_model_prep.R` draws the 20% Stage 1 and
   33% Stage 2 site-stratified samples; the holdout is the complement. The two samples were drawn
   independently and overlap by 19.9%. Downstream scripts regenerate the holdout from the seed; one
@@ -72,7 +77,8 @@ placeholder.
 ## License and citation
 
 Code is released under the MIT License (`LICENSE`). Derived tables in `data_derived/` are released
-under CC BY 4.0. Please cite the paper (see `CITATION.cff`).
+under CC BY 4.0 (`data_derived/LICENSE`). Please cite the paper (see `CITATION.cff`). Releases are
+archived at Zenodo under the concept DOI https://doi.org/10.5281/zenodo.22831703.
 
 ## Funding
 

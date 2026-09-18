@@ -59,7 +59,7 @@ def process_site(site_num, base_path):
 
 def main():
     # Base path to sites folder
-    base_path = r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites"
+    base_path = r"<LOCAL_DATA_ROOT>\gedi\sites"
     
     print("=" * 70)
     print("GEDI Date Range Extractor")

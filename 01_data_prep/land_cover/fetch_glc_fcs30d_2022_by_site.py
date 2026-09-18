@@ -22,8 +22,8 @@ import geopandas as gpd
 from shapely.geometry import mapping
 
 # ---------- Paths (edit if needed) ----------
-SITES_DIR = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites")
-OUT_ROOT  = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\general\lc")
+SITES_DIR = Path(r"<LOCAL_DATA_ROOT>\gedi\sites")
+OUT_ROOT  = Path(r"<LOCAL_DATA_ROOT>\general\lc")
 
 # ---------- GLC_FCS30D 2022 asset (STAC + fallback URL) ----------
 STAC_ITEM_2022 = "https://stac.openlandmap.org/lc_glc.fcs30d/lc_glc.fcs30d_20220101_20221231/lc_glc.fcs30d_20220101_20221231.json"

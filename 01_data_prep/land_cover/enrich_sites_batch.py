@@ -5,9 +5,9 @@ Enrich individual site CSVs with landcover (sites 2-4, 6-20 only)
 import subprocess
 from pathlib import Path
 
-SITE_CSV_DIR = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\sampled_data_FINAL_by_site")
-GEDI_ROOT = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites")
-LC_ROOT = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\general\lc")
+SITE_CSV_DIR = Path(r"<LOCAL_DATA_ROOT>\sampled_data_FINAL_by_site")
+GEDI_ROOT = Path(r"<LOCAL_DATA_ROOT>\gedi\sites")
+LC_ROOT = Path(r"<LOCAL_DATA_ROOT>\general\lc")
 
 # Sites to process (exclude 1 and 5)
 SITES = [2, 3, 4] + list(range(6, 21))

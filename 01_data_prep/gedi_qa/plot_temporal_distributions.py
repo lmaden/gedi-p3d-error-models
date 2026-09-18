@@ -206,8 +206,8 @@ def create_overview_plot(all_sites_data, output_path):
 
 def main():
     # Paths
-    gedi_base_path = r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites"
-    footprint_path = r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\sites"
+    gedi_base_path = r"<LOCAL_DATA_ROOT>\gedi\sites"
+    footprint_path = r"<LOCAL_DATA_ROOT>\sites"
     
     print("=" * 70)
     print("Temporal Distribution Plot Generator")

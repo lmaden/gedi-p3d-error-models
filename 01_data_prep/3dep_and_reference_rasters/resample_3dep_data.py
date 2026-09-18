@@ -41,8 +41,8 @@ from helper_speed import (
 # ---------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------
-CHECKPOINT_DIR = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\sampled_data_FINAL_by_site")
-GEDI_BASE = Path(r"C:\Users\levim\OneDrive\Desktop\work\gedi\dissertation\chpt1\data\gedi\sites")
+CHECKPOINT_DIR = Path(r"<LOCAL_DATA_ROOT>\sampled_data_FINAL_by_site")
+GEDI_BASE = Path(r"<LOCAL_DATA_ROOT>\gedi\sites")
 SLOPE_BASE = Path(r"D:\slope")
 ASPECT_BASE = Path(r"D:\aspect")
 DEP_BASE = Path(r"D:\3dep")

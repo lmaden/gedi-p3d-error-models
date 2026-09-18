@@ -17,10 +17,15 @@ authors:
   - family-names: Dubayah
     given-names: Ralph
     affiliation: "Department of Geographical Sciences, University of Maryland"
-version: "1.0.1"
+version: "1.0.2"
 date-released: "2026-09-18"
 license: MIT
 repository-code: "https://github.com/lmaden/gedi-p3d-error-models"
+doi: 10.5281/zenodo.22831703
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22831703
+    description: "Zenodo concept DOI (resolves to the latest archived version)"
 preferred-citation:
   type: article
   title: "Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
