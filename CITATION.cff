@@ -17,8 +17,8 @@ authors:
   - family-names: Dubayah
     given-names: Ralph
     affiliation: "Department of Geographical Sciences, University of Maryland"
-version: "1.0.0"
-date-released: "2026-09-14"
+version: "1.0.1"
+date-released: "2026-09-18"
 license: MIT
 repository-code: "https://github.com/lmaden/gedi-p3d-error-models"
 preferred-citation:

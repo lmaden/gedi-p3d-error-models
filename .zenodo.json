@@ -12,6 +12,5 @@
   "keywords": ["GEDI", "canopy height model", "digital terrain model", "stereo photogrammetry", "uncertainty quantification", "Vantor Precision3D", "Bayesian hierarchical model", "brms"],
   "license": "MIT",
   "access_right": "open",
-  "grants": [{"id": "NNL15AA03C"}],
   "notes": "Funded by the NASA GEDI mission (contract NNL15AA03C to the University of Maryland)."
 }
