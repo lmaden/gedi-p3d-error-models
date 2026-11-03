@@ -1,10 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this code or the derived tables, please cite the paper below."
-title: "Analysis code and derived data for: Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
+title: "Analysis code and derived data for: Assessing Precision3D satellite photogrammetric elevation models for forest canopy height retrieval"
 authors:
   - family-names: Madenberg
     given-names: Levi
     affiliation: "Department of Geographical Sciences, University of Maryland; Vantor Technologies"
+    orcid: "https://orcid.org/0009-0005-0489-5977"
   - family-names: May
     given-names: Paul B.
     affiliation: "Department of Mathematics, South Dakota School of Mines and Technology"
@@ -17,8 +18,8 @@ authors:
   - family-names: Dubayah
     given-names: Ralph
     affiliation: "Department of Geographical Sciences, University of Maryland"
-version: "1.0.2"
-date-released: "2026-09-18"
+version: "2.0.0"
+date-released: "2026-11-02"
 license: MIT
 repository-code: "https://github.com/lmaden/gedi-p3d-error-models"
 doi: 10.5281/zenodo.22831703
@@ -26,9 +27,17 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.22831703
     description: "Zenodo concept DOI (resolves to the latest archived version)"
+keywords:
+  - Precision3D
+  - satellite photogrammetry
+  - canopy height
+  - digital surface model
+  - digital terrain model
+  - airborne lidar
+  - GEDI
 preferred-citation:
   type: article
-  title: "Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI"
+  title: "Assessing Precision3D satellite photogrammetric elevation models for forest canopy height retrieval"
   authors:
     - family-names: Madenberg
       given-names: Levi
@@ -40,6 +49,6 @@ preferred-citation:
       given-names: Adrian
     - family-names: Dubayah
       given-names: Ralph
-  journal: "ISPRS Journal of Photogrammetry and Remote Sensing"
+  journal: "ISPRS Open Journal of Photogrammetry and Remote Sensing"
   year: 2026
   notes: "Submitted"

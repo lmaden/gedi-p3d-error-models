@@ -1,0 +1,196 @@
+rework_fullfit.R  --response chm
+started: 2026-09-25 17:36:10
+iterations 3000 | 4 chains x 8 threads | adapt_delta 0.980 | max_treedepth 14 | init random
+
+============================================================================================ 
+##  STEP 0  --  WRITE-LOCATION GUARD 
+============================================================================================ 
+tempdir():  <CLUSTER_ROOT>/Rtmp/RtmphatJOr 
+
+============================================================================================ 
+##  STEP 1  --  DATA (rework_model_prep.R) 
+============================================================================================ 
+rows 68,786 (0 dropped for incomplete variables), 18 sites
+response chm_error_mean: mean -3.082  sd 4.625
+
+============================================================================================ 
+##  STEP 2  --  MODEL (the submitted specification) 
+============================================================================================ 
+y ~ slope_mean_z + slope_sd_z + wsci_z + rh_98_z + cover_z + aspect_sin_z + aspect_cos_z + meta_offnad_z + meta_sunel_z + meta_az_conc_z + meta_stereo_z + meta_leafon_z + meta_fwdrev_z + meta_absgeo_z + meta_relgeo_z + view_az_sin_z + view_az_cos_z + s(slope_mean_z, wsci_z, k = 20) + slope_mean_z:lc_grp + wsci_z:lc_grp + (1 + slope_mean_z | ecoregion) + (1 | site) + (1 + wsci_z | lc_grp) 
+sigma ~ 1 + slope_mean_z + (1 | site) + (1 | lc_grp)
+
+============================================================================================ 
+##  STEP 3  --  FITTING 
+============================================================================================ 
+Running MCMC with 4 parallel chains, with 8 thread(s) per chain...
+
+Chain 3 Iteration:    1 / 3000 [  0%]  (Warmup) 
+Chain 1 Iteration:    1 / 3000 [  0%]  (Warmup) 
+Chain 4 Iteration:    1 / 3000 [  0%]  (Warmup) 
+Chain 2 Iteration:    1 / 3000 [  0%]  (Warmup) 
+Chain 1 Iteration:  100 / 3000 [  3%]  (Warmup) 
+Chain 3 Iteration:  100 / 3000 [  3%]  (Warmup) 
+Chain 2 Iteration:  100 / 3000 [  3%]  (Warmup) 
+Chain 4 Iteration:  100 / 3000 [  3%]  (Warmup) 
+Chain 2 Iteration:  200 / 3000 [  6%]  (Warmup) 
+Chain 1 Iteration:  200 / 3000 [  6%]  (Warmup) 
+Chain 3 Iteration:  200 / 3000 [  6%]  (Warmup) 
+Chain 4 Iteration:  200 / 3000 [  6%]  (Warmup) 
+Chain 1 Iteration:  300 / 3000 [ 10%]  (Warmup) 
+Chain 2 Iteration:  300 / 3000 [ 10%]  (Warmup) 
+Chain 1 Iteration:  400 / 3000 [ 13%]  (Warmup) 
+Chain 3 Iteration:  300 / 3000 [ 10%]  (Warmup) 
+Chain 4 Iteration:  300 / 3000 [ 10%]  (Warmup) 
+Chain 2 Iteration:  400 / 3000 [ 13%]  (Warmup) 
+Chain 3 Iteration:  400 / 3000 [ 13%]  (Warmup) 
+Chain 1 Iteration:  500 / 3000 [ 16%]  (Warmup) 
+Chain 4 Iteration:  400 / 3000 [ 13%]  (Warmup) 
+Chain 2 Iteration:  500 / 3000 [ 16%]  (Warmup) 
+Chain 1 Iteration:  600 / 3000 [ 20%]  (Warmup) 
+Chain 2 Iteration:  600 / 3000 [ 20%]  (Warmup) 
+Chain 4 Iteration:  500 / 3000 [ 16%]  (Warmup) 
+Chain 3 Iteration:  500 / 3000 [ 16%]  (Warmup) 
+Chain 1 Iteration:  700 / 3000 [ 23%]  (Warmup) 
+Chain 2 Iteration:  700 / 3000 [ 23%]  (Warmup) 
+Chain 4 Iteration:  600 / 3000 [ 20%]  (Warmup) 
+Chain 1 Iteration:  800 / 3000 [ 26%]  (Warmup) 
+Chain 3 Iteration:  600 / 3000 [ 20%]  (Warmup) 
+Chain 2 Iteration:  800 / 3000 [ 26%]  (Warmup) 
+Chain 4 Iteration:  700 / 3000 [ 23%]  (Warmup) 
+Chain 3 Iteration:  700 / 3000 [ 23%]  (Warmup) 
+Chain 1 Iteration:  900 / 3000 [ 30%]  (Warmup) 
+Chain 2 Iteration:  900 / 3000 [ 30%]  (Warmup) 
+Chain 4 Iteration:  800 / 3000 [ 26%]  (Warmup) 
+Chain 3 Iteration:  800 / 3000 [ 26%]  (Warmup) 
+Chain 1 Iteration: 1000 / 3000 [ 33%]  (Warmup) 
+Chain 4 Iteration:  900 / 3000 [ 30%]  (Warmup) 
+Chain 2 Iteration: 1000 / 3000 [ 33%]  (Warmup) 
+Chain 3 Iteration:  900 / 3000 [ 30%]  (Warmup) 
+Chain 1 Iteration: 1100 / 3000 [ 36%]  (Warmup) 
+Chain 2 Iteration: 1100 / 3000 [ 36%]  (Warmup) 
+Chain 4 Iteration: 1000 / 3000 [ 33%]  (Warmup) 
+Chain 3 Iteration: 1000 / 3000 [ 33%]  (Warmup) 
+Chain 1 Iteration: 1200 / 3000 [ 40%]  (Warmup) 
+Chain 4 Iteration: 1100 / 3000 [ 36%]  (Warmup) 
+Chain 1 Iteration: 1300 / 3000 [ 43%]  (Warmup) 
+Chain 2 Iteration: 1200 / 3000 [ 40%]  (Warmup) 
+Chain 3 Iteration: 1100 / 3000 [ 36%]  (Warmup) 
+Chain 4 Iteration: 1200 / 3000 [ 40%]  (Warmup) 
+Chain 1 Iteration: 1400 / 3000 [ 46%]  (Warmup) 
+Chain 2 Iteration: 1300 / 3000 [ 43%]  (Warmup) 
+Chain 4 Iteration: 1300 / 3000 [ 43%]  (Warmup) 
+Chain 3 Iteration: 1200 / 3000 [ 40%]  (Warmup) 
+Chain 1 Iteration: 1500 / 3000 [ 50%]  (Warmup) 
+Chain 1 Iteration: 1501 / 3000 [ 50%]  (Sampling) 
+Chain 2 Iteration: 1400 / 3000 [ 46%]  (Warmup) 
+Chain 4 Iteration: 1400 / 3000 [ 46%]  (Warmup) 
+Chain 1 Iteration: 1600 / 3000 [ 53%]  (Sampling) 
+Chain 3 Iteration: 1300 / 3000 [ 43%]  (Warmup) 
+Chain 4 Iteration: 1500 / 3000 [ 50%]  (Warmup) 
+Chain 4 Iteration: 1501 / 3000 [ 50%]  (Sampling) 
+Chain 2 Iteration: 1500 / 3000 [ 50%]  (Warmup) 
+Chain 2 Iteration: 1501 / 3000 [ 50%]  (Sampling) 
+Chain 1 Iteration: 1700 / 3000 [ 56%]  (Sampling) 
+Chain 3 Iteration: 1400 / 3000 [ 46%]  (Warmup) 
+Chain 4 Iteration: 1600 / 3000 [ 53%]  (Sampling) 
+Chain 1 Iteration: 1800 / 3000 [ 60%]  (Sampling) 
+Chain 2 Iteration: 1600 / 3000 [ 53%]  (Sampling) 
+Chain 4 Iteration: 1700 / 3000 [ 56%]  (Sampling) 
+Chain 3 Iteration: 1500 / 3000 [ 50%]  (Warmup) 
+Chain 3 Iteration: 1501 / 3000 [ 50%]  (Sampling) 
+Chain 1 Iteration: 1900 / 3000 [ 63%]  (Sampling) 
+Chain 2 Iteration: 1700 / 3000 [ 56%]  (Sampling) 
+Chain 4 Iteration: 1800 / 3000 [ 60%]  (Sampling) 
+Chain 1 Iteration: 2000 / 3000 [ 66%]  (Sampling) 
+Chain 3 Iteration: 1600 / 3000 [ 53%]  (Sampling) 
+Chain 4 Iteration: 1900 / 3000 [ 63%]  (Sampling) 
+Chain 2 Iteration: 1800 / 3000 [ 60%]  (Sampling) 
+Chain 1 Iteration: 2100 / 3000 [ 70%]  (Sampling) 
+Chain 3 Iteration: 1700 / 3000 [ 56%]  (Sampling) 
+Chain 4 Iteration: 2000 / 3000 [ 66%]  (Sampling) 
+Chain 1 Iteration: 2200 / 3000 [ 73%]  (Sampling) 
+Chain 2 Iteration: 1900 / 3000 [ 63%]  (Sampling) 
+Chain 3 Iteration: 1800 / 3000 [ 60%]  (Sampling) 
+Chain 4 Iteration: 2100 / 3000 [ 70%]  (Sampling) 
+Chain 1 Iteration: 2300 / 3000 [ 76%]  (Sampling) 
+Chain 2 Iteration: 2000 / 3000 [ 66%]  (Sampling) 
+Chain 4 Iteration: 2200 / 3000 [ 73%]  (Sampling) 
+Chain 1 Iteration: 2400 / 3000 [ 80%]  (Sampling) 
+Chain 3 Iteration: 1900 / 3000 [ 63%]  (Sampling) 
+Chain 4 Iteration: 2300 / 3000 [ 76%]  (Sampling) 
+Chain 1 Iteration: 2500 / 3000 [ 83%]  (Sampling) 
+Chain 2 Iteration: 2100 / 3000 [ 70%]  (Sampling) 
+Chain 3 Iteration: 2000 / 3000 [ 66%]  (Sampling) 
+Chain 4 Iteration: 2400 / 3000 [ 80%]  (Sampling) 
+Chain 1 Iteration: 2600 / 3000 [ 86%]  (Sampling) 
+Chain 2 Iteration: 2200 / 3000 [ 73%]  (Sampling) 
+Chain 4 Iteration: 2500 / 3000 [ 83%]  (Sampling) 
+Chain 3 Iteration: 2100 / 3000 [ 70%]  (Sampling) 
+Chain 1 Iteration: 2700 / 3000 [ 90%]  (Sampling) 
+Chain 4 Iteration: 2600 / 3000 [ 86%]  (Sampling) 
+Chain 1 Iteration: 2800 / 3000 [ 93%]  (Sampling) 
+Chain 2 Iteration: 2300 / 3000 [ 76%]  (Sampling) 
+Chain 3 Iteration: 2200 / 3000 [ 73%]  (Sampling) 
+Chain 4 Iteration: 2700 / 3000 [ 90%]  (Sampling) 
+Chain 1 Iteration: 2900 / 3000 [ 96%]  (Sampling) 
+Chain 2 Iteration: 2400 / 3000 [ 80%]  (Sampling) 
+Chain 3 Iteration: 2300 / 3000 [ 76%]  (Sampling) 
+Chain 4 Iteration: 2800 / 3000 [ 93%]  (Sampling) 
+Chain 1 Iteration: 3000 / 3000 [100%]  (Sampling) 
+Chain 1 finished in 54397.2 seconds.
+Chain 4 Iteration: 2900 / 3000 [ 96%]  (Sampling) 
+Chain 2 Iteration: 2500 / 3000 [ 83%]  (Sampling) 
+Chain 3 Iteration: 2400 / 3000 [ 80%]  (Sampling) 
+Chain 4 Iteration: 3000 / 3000 [100%]  (Sampling) 
+Chain 4 finished in 56867.8 seconds.
+Chain 2 Iteration: 2600 / 3000 [ 86%]  (Sampling) 
+Chain 3 Iteration: 2500 / 3000 [ 83%]  (Sampling) 
+Chain 2 Iteration: 2700 / 3000 [ 90%]  (Sampling) 
+Chain 3 Iteration: 2600 / 3000 [ 86%]  (Sampling) 
+Chain 2 Iteration: 2800 / 3000 [ 93%]  (Sampling) 
+Chain 3 Iteration: 2700 / 3000 [ 90%]  (Sampling) 
+Chain 3 Iteration: 2800 / 3000 [ 93%]  (Sampling) 
+Chain 2 Iteration: 2900 / 3000 [ 96%]  (Sampling) 
+Chain 3 Iteration: 2900 / 3000 [ 96%]  (Sampling) 
+Chain 2 Iteration: 3000 / 3000 [100%]  (Sampling) 
+Chain 2 finished in 62771.9 seconds.
+Chain 3 Iteration: 3000 / 3000 [100%]  (Sampling) 
+Chain 3 finished in 63463.7 seconds.
+
+All 4 chains finished successfully.
+Mean chain execution time: 59375.2 seconds.
+Total execution time: 63464.9 seconds.
+
+
+WALL CLOCK: 17.65 hours
+
+============================================================================================ 
+##  STEP 4  --  DIAGNOSTICS 
+============================================================================================ 
+  divergences          0   PASS
+  max Rhat        1.0073   PASS
+  min ESS ratio    0.174   PASS
+  % at ceiling      0.00%   PASS
+
+  FULL FIT DIAGNOSTICS:  PASS 
+
+============================================================================================ 
+##  STEP 5  --  SUMMARIES 
+============================================================================================ 
+  R2 total 0.212 | R2 fixed-only 0.039 | site SD 1.466 | RH98 -0.241 m per SD | nu 3.33
+
+============================================================================================ 
+##  STEP 6  --  SITE-KNOWN ROW OF THE TRANSFER TABLE, BY FOLD 
+============================================================================================ 
+  fold 1 (sites 1 19 20): RMSE 2.873  cov90 0.890
+  fold 2 (sites 3 13 2): RMSE 3.878  cov90 0.896
+  fold 3 (sites 4 12 15): RMSE 4.344  cov90 0.907
+  fold 4 (sites 5 11 14): RMSE 4.379  cov90 0.885
+  fold 5 (sites 6 9 18): RMSE 4.185  cov90 0.893
+  fold 6 (sites 7 8 17): RMSE 4.901  cov90 0.914
+
+  diagnostics PASS | 17.65 h
+============================================================================================ 
+finished: 2026-09-26 11:17:52
+log: <CLUSTER_ROOT>/chpt1/manuscript_tables/rework/chm/fullfit_20260925.log
+============================================================================================ 

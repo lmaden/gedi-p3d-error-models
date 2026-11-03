@@ -22,3 +22,6 @@ __pycache__/
 !docs/run_logs/*.log
 Thumbs.db
 desktop.ini
+
+# outputs of a local rerun (the published copies are in data_derived/results/)
+/results/

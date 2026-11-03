@@ -1,0 +1,65 @@
+prior,class,coef,group,resp,dpar,nlpar,lb,ub,tag,source
+"normal(0, 10)",Intercept,"","","","","","","","",user
+"student_t(3, 0, 5)",Intercept,"","","",sigma,"","","","",user
+lkj_corr_cholesky(1),L,"","","","","","","","",default
+"",L,"",ecoregion,"","","","","","",default
+"",L,"",lc_grp,"","","","","","",default
+"normal(0, 2)",b,"","","","","","","","",user
+"",b,aspect_cos_z,"","","","","","","",default
+"",b,aspect_sin_z,"","","","","","","",default
+"",b,cover_z,"","","","","","","",default
+"",b,meta_absgeo_z,"","","","","","","",default
+"",b,meta_az_conc_z,"","","","","","","",default
+"",b,meta_fwdrev_z,"","","","","","","",default
+"",b,meta_leafon_z,"","","","","","","",default
+"",b,meta_offnad_z,"","","","","","","",default
+"",b,meta_relgeo_z,"","","","","","","",default
+"",b,meta_stereo_z,"","","","","","","",default
+"",b,meta_sunel_z,"","","","","","","",default
+"",b,rh_98_z,"","","","","","","",default
+"",b,slope_mean_z,"","","","","","","",default
+"",b,slope_mean_z:lc_grpBDF,"","","","","","","",default
+"",b,slope_mean_z:lc_grpDNF,"","","","","","","",default
+"",b,slope_mean_z:lc_grpEBF,"","","","","","","",default
+"",b,slope_mean_z:lc_grpGRS,"","","","","","","",default
+"",b,slope_mean_z:lc_grpIMP,"","","","","","","",default
+"",b,slope_mean_z:lc_grpIWL,"","","","","","","",default
+"",b,slope_mean_z:lc_grpOTHER,"","","","","","","",default
+"",b,slope_mean_z:lc_grpRCP,"","","","","","","",default
+"",b,slope_mean_z:lc_grpUNK,"","","","","","","",default
+"",b,slope_mean_z:lc_grpWTR,"","","","","","","",default
+"",b,slope_sd_z,"","","","","","","",default
+"",b,sslope_mean_zwsci_z_1,"","","","","","","",default
+"",b,sslope_mean_zwsci_z_2,"","","","","","","",default
+"",b,view_az_cos_z,"","","","","","","",default
+"",b,view_az_sin_z,"","","","","","","",default
+"",b,wsci_z,"","","","","","","",default
+"",b,wsci_z:lc_grpBDF,"","","","","","","",default
+"",b,wsci_z:lc_grpDNF,"","","","","","","",default
+"",b,wsci_z:lc_grpEBF,"","","","","","","",default
+"",b,wsci_z:lc_grpGRS,"","","","","","","",default
+"",b,wsci_z:lc_grpIMP,"","","","","","","",default
+"",b,wsci_z:lc_grpIWL,"","","","","","","",default
+"",b,wsci_z:lc_grpOTHER,"","","","","","","",default
+"",b,wsci_z:lc_grpRCP,"","","","","","","",default
+"",b,wsci_z:lc_grpUNK,"","","","","","","",default
+"",b,wsci_z:lc_grpWTR,"","","","","","","",default
+"normal(0, 1)",b,"","","",sigma,"","","","",user
+"",b,slope_mean_z,"","",sigma,"","","","",default
+"gamma(2, 0.1)",nu,"","","","","",1,"","",user
+"student_t(3, 0, 2)",sd,"","","","","",0,"","",user
+"student_t(3, 0, 2.5)",sd,"","","",sigma,"",0,"","",default
+"",sd,"",ecoregion,"","","","","","",default
+"",sd,Intercept,ecoregion,"","","","","","",default
+"",sd,slope_mean_z,ecoregion,"","","","","","",default
+"",sd,"",lc_grp,"","","","","","",default
+"",sd,Intercept,lc_grp,"","","","","","",default
+"",sd,wsci_z,lc_grp,"","","","","","",default
+"",sd,"",lc_grp,"",sigma,"","","","",default
+"",sd,Intercept,lc_grp,"",sigma,"","","","",default
+"",sd,"",site,"","","","","","",default
+"",sd,Intercept,site,"","","","","","",default
+"",sd,"",site,"",sigma,"","","","",default
+"",sd,Intercept,site,"",sigma,"","","","",default
+"normal(0, 1.5)",sds,"","","","","",0,"","",user
+"",sds,"s(slope_mean_z, wsci_z, k = 20)","","","","","","","",default

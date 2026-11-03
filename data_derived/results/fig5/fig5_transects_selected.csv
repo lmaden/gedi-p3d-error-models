@@ -1,0 +1,4 @@
+site_id,paper_site,site_name,first_shot_number,last_shot_number,n_footprints,mean_dsm_error_m,mean_dtm_error_m,mean_chm_error_m
+4,4,Harvard Forest,17570000300216709,17570000300216727,17,-1.45,6.19,-7.64
+6,6,Jones Center,127280800300244687,127280800300244705,19,0.92,1.16,-0.25
+14,13,Chequamegon,214820500300195232,214820500300195243,12,-6.02,2.59,-8.61

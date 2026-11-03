@@ -1,16 +1,16 @@
 {
-  "title": "Analysis code and derived data for: Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI",
+  "title": "Analysis code and derived data for: Assessing Precision3D satellite photogrammetric elevation models for forest canopy height retrieval",
   "upload_type": "software",
-  "description": "Analysis code (R and Python) and derived site-level and forest-type-level tables supporting the manuscript 'Bayesian hierarchical characterization of satellite photogrammetric elevation errors in forests using GEDI' (submitted to ISPRS Journal of Photogrammetry and Remote Sensing, 2026). The archive contains no Vantor Precision3D imagery or delivered elevation rasters and no per-footprint proprietary values.",
+  "description": "Analysis code (R and Python) and derived site-level and forest-type-level tables supporting the manuscript 'Assessing Precision3D satellite photogrammetric elevation models for forest canopy height retrieval' (submitted to the ISPRS Open Journal of Photogrammetry and Remote Sensing, 2026). The code compares the Precision3D digital surface model, digital terrain model and canopy height model with airborne lidar at GEDI footprints across 18 US sites, fits Bayesian hierarchical models of the errors and tests corrections at held-out sites. The archive contains no Vantor Precision3D imagery or delivered elevation rasters and no per-footprint proprietary values. Versions 1.0.x archive the analysis of an earlier version of the manuscript.",
   "creators": [
-    {"name": "Madenberg, Levi", "affiliation": "University of Maryland; Vantor Technologies"},
+    {"name": "Madenberg, Levi", "affiliation": "University of Maryland; Vantor Technologies", "orcid": "0009-0005-0489-5977"},
     {"name": "May, Paul B.", "affiliation": "South Dakota School of Mines and Technology"},
     {"name": "Tang, Hao", "affiliation": "National University of Singapore"},
     {"name": "Pascual, Adrian", "affiliation": "University of Maryland"},
     {"name": "Dubayah, Ralph", "affiliation": "University of Maryland"}
   ],
-  "keywords": ["GEDI", "canopy height model", "digital terrain model", "stereo photogrammetry", "uncertainty quantification", "Vantor Precision3D", "Bayesian hierarchical model", "brms"],
+  "keywords": ["Precision3D", "satellite photogrammetry", "canopy height", "digital surface model", "digital terrain model", "airborne lidar", "GEDI", "Bayesian hierarchical model", "brms"],
   "license": "MIT",
   "access_right": "open",
-  "notes": "Funded by the NASA GEDI mission (contract NNL15AA03C to the University of Maryland)."
+  "notes": "Carried out within the NASA GEDI mission (contract NNL15AA03C to the University of Maryland)."
 }

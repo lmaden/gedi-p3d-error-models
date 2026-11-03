@@ -1,0 +1,19 @@
+paper_site,short_name,state,formal_name_for_table1,tracker,lidar_flight
+1,Northern Maine,ME,Northern Maine (USFS regional acquisition),1,usda_me
+2,Howland Forest,ME,Howland Forest,2,nasa_howland
+3,Eastern Massachusetts,MA,Eastern Massachusetts,3,neon_sawb
+4,Harvard Forest,MA,Harvard Forest,4,neon_harv2019
+5,Coastal South Carolina,SC,Coastal South Carolina (USFS regional acquisition),5,usda_sc
+6,Jones Center,GA,Jones Ecological Research Center,6,neon_jerc2019
+7,Talladega,AL,Talladega National Forest,7,neon_tall2021
+8,Dead Lake,AL,Dead Lake,8,neon_dela2021
+9,Lenoir Landing,AL,Lenoir Landing,9,neon_leno2021
+10,Konza Prairie,KS,Konza Prairie Biological Station,11,neon_konz2020
+11,Steigerwaldt,WI,Steigerwaldt Land Services,12,neon_stei2022
+12,UNDERC,MI,University of Notre Dame Environmental Research Center (UNDERC),13,neon_unde2022
+13,Chequamegon,WI,Chequamegon-Nicolet National Forest,14,neon_steicheq2022
+14,Woodworth,ND,Woodworth,15,neon_wood2021
+15,Sterling,CO,Sterling,17,neon_ster2022
+16,Central Plains,CO,Central Plains Experimental Range,18,neon_cper2021
+17,Lake Tahoe Basin,CA,Lake Tahoe Basin Management Unit,19,ltbmu_20180710
+18,San Joaquin,CA,San Joaquin Experimental Range,20,neon_sjer2019

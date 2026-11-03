@@ -1,0 +1,21 @@
+variable,group,name,description,units,source,mean,sd
+slope_mean,Terrain,Slope,Mean terrain slope over the footprint,degrees,3DEP,5.58918277130031,5.74397080120793
+slope_sd,Terrain,Slope variability,Standard deviation of slope over the footprint,degrees,3DEP,2.42785604165675,1.91334312565276
+aspect_sin_mean,Terrain,Aspect (sine),East-west orientation,unitless,3DEP,-0.00251768825647615,0.439987931173444
+aspect_cos_mean,Terrain,Aspect (cosine),North-south orientation,unitless,3DEP,-0.00701093323180888,0.429482105552019
+rh_98,Canopy,Canopy height (RH98),GEDI 98th percentile relative height,m,"GEDI L2A (Hofton and Blair, 2019)",15.8799792668031,8.03580202765165
+cover,Canopy,Canopy cover,GEDI canopy cover fraction,proportion,"GEDI L2B (Tang and Armston, 2019)",0.403534168847856,0.280140296790828
+wsci,Canopy,Structural complexity (WSCI),Waveform structural complexity index,unitless,"GEDI L4C (de Conto et al., 2024)",9.45306107362109,0.887937937861733
+meta_off_nadir_avg,Image,Off-nadir angle,Mean off-nadir viewing angle of the images covering the footprint,degrees,P3D metadata,24.1094822987213,3.17581693043656
+meta_sun_elev_avg,Image,Sun elevation,Mean sun elevation of the images covering the footprint,degrees,P3D metadata,47.0958394679151,5.56943230437526
+meta_az_concentration,Image,Azimuth concentration,"Mean resultant length of the images' viewing azimuths (0 when evenly spread, 1 when all from one direction)",unitless,P3D metadata,0.285136541296326,0.13071583345155
+view_az_sin,Image,Viewing azimuth (sine),East-west component of the mean viewing azimuth,unitless,P3D metadata,-0.500128453826161,0.606182044815008
+view_az_cos,Image,Viewing azimuth (cosine),North-south component of the mean viewing azimuth,unitless,P3D metadata,0.366940896922956,0.497765218078944
+meta_stereo_ratio,Image,Stereo ratio,Share of images acquired as in-track stereo,proportion,P3D metadata,0.278659980013977,0.114958443499699
+fwdrev,Image,Forward-reverse balance,Share of forward-looking minus share of reverse-looking images,unitless,P3D metadata,0.356733246365925,0.186963290409818
+meta_leaf_on_ratio,Image,Leaf-on fraction,Share of images acquired between 9 March and 13 October (leaf-on season),proportion,P3D metadata,0.645820874979614,0.100203690287113
+meta_abs_geoacc_avg,Image,Absolute geoaccuracy,Mean absolute geolocation accuracy of the images covering the footprint,m,P3D metadata,9.92394606563206,2.02334022042393
+meta_rel_geoacc_avg,Image,Relative geoaccuracy,Mean relative geolocation accuracy of the images covering the footprint,m,P3D metadata,2.57698853985341,0.315073006633558
+,Grouping,Site,The 18 sites (Table 1),category,This study,,
+,Grouping,Level II ecoregion,Ecoregion of the footprint,category,"CEC Level II (Commission for Environmental Cooperation, 1997)",,
+,Grouping,Land-cover class,"Class of the footprint, with the ten most common classes kept separate and all other classes combined into one group",category,"GLC_FCS30 (Zhang et al., 2021)",,

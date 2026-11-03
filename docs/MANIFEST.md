@@ -1,73 +1,65 @@
-# Manifest: which script produces which artifact
+# Manifest: paper items, scripts and outputs
 
-Paths are repository-relative. Scripts marked as running on the University of Maryland cluster
-read their project root from `PROJECT_ROOT`. Site
-numbers inside scripts and per-site CSVs are TRACKER numbers; the manuscript numbering is given by
-`data_derived/site_id_lookup.csv` (tracker 1 to 15 = manuscript 1 to 15; tracker 17 to 20 =
-manuscript 16 to 19; tracker 16 and 21 are not in the study). The helper `tracker_to_manuscript()`
-in `05_figures_tables/fig_common.R` applies the mapping.
+Script paths are relative to the repository root. Output paths are relative to the results root
+(`P3D_RESULTS`). A copy of each published table output is in `data_derived/results/` under the same
+relative path, so a rerun can be compared file by file. `05_tables_figures/RUN_ORDER.md` gives the run
+order and the inputs of every script.
 
-The published CHM fit is the 16-site fit stored as `fit_chm_16` inside `checkpoints/10b_chm_sensitivity.rds`
-(produced by `02_model_fitting/section_10b_chm_sensitivity_refit.R`). The published DTM fit is
-`fit_dtm_s2` inside `checkpoints/10_models_stage2.rds` (produced by `02_model_fitting/section_10_models_stage2.R`).
+## Tables
 
-## Main text
-
-| Artifact | Script(s) | Notes |
+| Paper item | Script | Output |
 |---|---|---|
-| Table 1 | `01_data_prep/r_workflow/extract_section2_1_study_sites.R` | outputs are tracker-indexed |
-| Table 2 | `01_data_prep/r_workflow/extract_table3_predictor_stats.R` | the script name carries the table's old number; the published run used the pre-filter footprint set |
-| Table 3 | not on disk (see Known gaps in README); same basis as Table S8; `05_figures_tables/figS15_chm_dtm_diagnostics.R` reproduces the n and the descriptive statistics printed in its console log | |
-| Table 4 | `02_model_fitting/section_10b_full_comparison.R` (CHM R², ν, holdout metrics), `03_evaluation/compute_definitive_r2.R` (DTM row only), `03_evaluation/verify_predictive_accuracy.R`, `03_evaluation/holdout_02_scoring.R`, `03_evaluation/holdout_03_cluster_values.R`, `03_evaluation/pipeline_preflight.R` | composite table; cells transcribed from the listed outputs |
-| Table 5 | `02_model_fitting/section_10b_chm_sensitivity_refit.R` (CHM column, `est_16`), `05_figures_tables/fig3_coefficients.R` (DTM column) | |
-| Table 6 | `02_model_fitting/section_10b_full_comparison.R` (CHM), `03_evaluation/forest_type_accuracy_holdout_full.R` (DTM), `03_evaluation/pipeline_preflight.R` (CRPS) | |
-| Table 7 | `03_evaluation/leave_one_site_out/loo_table_build.R` pooling `loo_fold_chm.R` and `loo_fold_dtm.R` outputs | run log in `docs/run_logs/loo_table_build.txt` |
-| Fig. 1 | `05_figures_tables/fig1_sitemap.R` via `fig1_sitemap_run_local.R` | |
-| Fig. 2 | `05_figures_tables/fig2_workflow.svg` (hand-drawn, rendered with rsvg-convert) | |
-| Fig. 3 | `05_figures_tables/fig3_coefficients.R` | |
-| Fig. 4 | `05_figures_tables/fig4_coupling_15site.R` (panels a to c from `fig7_within_site_coupling.R`, panel d from `figure6_panel_d.R`) | the Section 3.4 cross-site correlation and its jackknife are reproduced by `03_evaluation/coupling_geoaccuracy_jackknife.R` |
-| Fig. 5 | `05_figures_tables/fig5_pred_vs_obs.R` | |
-| Fig. 6 | `05_figures_tables/fig_persite_prediction_intervals.R` | upstream `03_evaluation/per_site_interval_widths.R` |
-| Fig. 7 | `05_figures_tables/fig5_ppc_refined_p3d.R` | |
+| Table 1 | `05_tables_figures/table1_sites.R` (site facts from `05_tables_figures/table1_facts.R`) | `table1/table1_sites.{csv,md}` |
+| Table 2 | `05_tables_figures/site_weighted_accuracy.py` | `table2/table2_site_weighted.csv` |
+| Table 3 | `05_tables_figures/table3_transfer.R`, then `table3_panels.R` | `table3/table3_transfer.{csv,md}`, `table3/table3_panels.md` |
+| Table S1 | `05_tables_figures/tableS1_predictors.R` | `tableS1/tableS1_predictors.{csv,md}` |
+| Table S2 | `05_tables_figures/tableS2_transfer_groups.R` | `tableS2/tableS2_transfer_groups.{csv,md}` |
+| Table S3 | `05_tables_figures/tableS3_height_classes.R`, `tableS3_rmse_over5.R`, then `tableS3_assemble.py` | `tableS3/tableS3.md` (parts in `tableS3/`) |
+| Table S4 | `05_tables_figures/tableS4_persite.R`, `tableS4_forest_rows.py`, then `tableS4_assemble.py` | `tableS4/tableS4.md` (parts in `tableS4/`) |
+| Table S5 | `05_tables_figures/tableS5_coefficients.R`, then `tableS5_assemble.py` | `tableS5/tableS5.md` |
 
-## Supplement
+## Figures
 
-| Artifact | Script(s) |
-|---|---|
-| Figs. S1, S2 | `05_figures_tables/publication_figures.R` (conditional effects) and `supp_figs_plotting.R` |
-| Fig. S3 | `05_figures_tables/s3_vif_corr_probdir_16site.R` (exports) and `render_figS3_from_csv.R` |
-| Figs. S4, S6, S12 | `05_figures_tables/supp_figs_rerender.R`, `supp_figs_rerender_fixes.R` |
-| Fig. S5 | `05_figures_tables/publication_figures.R` |
-| Figs. S7, S8 | `03_evaluation/temporal_mismatch_analysis.R`, `figS13_variogram_values.R` |
-| Fig. S9 | `05_figures_tables/figS15_chm_dtm_diagnostics.R` |
-| Fig. S10 | `01_data_prep/r_workflow/section_03_eda.R` |
-| Fig. S11 | `05_figures_tables/figS11_site_random_effects.R` |
-| Fig. S13 | `05_figures_tables/figS20_dtm_spherical.R`, data from `03_evaluation/holdout_02_scoring.R` and `holdout_04_dtm_panel_data.R` |
-| Fig. S14 | `05_figures_tables/supp_figs_plotting.R` |
-| Fig. S15 | `05_figures_tables/fig6_spatial_residuals.R` |
-| Fig. S16 | `05_figures_tables/suppfig_S16_15panel_hexbin.R` |
-| Figs. S17, S18 | `05_figures_tables/suppfig_25_site5_cover_decile.R`, `suppfig_26_site5_lc_strata.R`; data from `04_coupling_analysis/site5_cover/site5_03_cover_decile_detail.R` |
-| Fig. S19 | `05_figures_tables/fig3_nu_posteriors.R` |
-| Tables S1, S4, S5 | `02_model_fitting/section_10b_chm_sensitivity_refit.R` (CHM), `fixef()` of the DTM fit (DTM) |
-| Table S2 | `03_evaluation/holdout_01_posterior_values.R`, `holdout_04_dtm_panel_data.R`; CHM column patch `03_evaluation/site_random_effect_correlations.R` |
-| Table S3 | prior block of `02_model_fitting/section_10_models_stage2.R`; verified by `03_evaluation/verify_priors.R` |
-| Tables S6a, S6b | `03_evaluation/figS9_16site_group_values.R`, `holdout_01_posterior_values.R` |
-| Table S7 | `03_evaluation/section_12_spatial.R` |
-| Table S8 | same as Table 3 |
-| Table S9 | `03_evaluation/holdout_02_scoring.R` (CHM), `section_11b_variance_decomposition.R` (DTM) |
-| Table S10 | `01_data_prep/site_joins_qc/extract_als_dates.py`; point-cloud inventory `04_coupling_analysis/reference_quality/als_pointcloud_inventory.sh`, `als_lasinfo_verify.sh` |
-| Table S11 | `03_evaluation/baselines/baseline_01_ladder.R`, `baseline_03_conformal_intervals.R`, `baseline_02_restricted.R`; run log in `docs/run_logs/baseline_conformal_intervals.log` |
-| Text S2 (reference quality) | `04_coupling_analysis/reference_quality/gedi_als_offset_distributions.R`, `gedi_als_offset_spatial_structure.R`; offsets recorded in the header of `section_10b_chm_sensitivity_refit.R` |
-| Text S2.1 | `04_coupling_analysis/reference_quality/als_vs_als_noise_floor.R` |
-| Text S2.2 | `02_model_fitting/counterfactual_chm_refit.R`; audit `03_evaluation/leave_one_site_out/loo_decomposition_audit.R` |
-| Text S2.3 | `04_coupling_analysis/site5_cover/*.R` |
-| Text S2.4 | prior predictive block of `02_model_fitting/section_08_model_prep.R` |
-| Text S2.5 | `03_evaluation/leave_one_site_out/*`, `02_model_fitting/confirmation_fits/*`, `02_model_fitting/tile_sensitivity_pilot/tile_pilot_chm.R`; run logs in `docs/run_logs/` |
+| Paper item | Script | Output |
+|---|---|---|
+| Fig. 1 | `05_tables_figures/fig1_site_map.R` | `fig1/fig1_site_map.{png,pdf}` |
+| Fig. 2 | `05_tables_figures/fig2_height_scatter.R` (panel statistics from `site_weighted_accuracy.py`) | `fig2/fig2_height_scatter.{png,pdf}`, `fig2/fig2_scatter_stats.csv` |
+| Fig. 3 | `05_tables_figures/fig3_error_distributions.R` | `fig3/fig3_error_distributions.{png,pdf}`, `fig3/fig3b_class_means.csv` |
+| Fig. 4 | `05_tables_figures/fig4_site_accuracy.R` (per-site values from `persite_class_tables.R`) | `fig4/fig4_site_accuracy.{png,pdf}` |
+| Fig. 5 | `05_tables_figures/fig5_select_transects.R`, `fig5_profiles.R` (cluster), `fig5_transects_plot.R` | `fig5/fig5_transects.{png,pdf}`; the three transects are listed in `data_derived/results/fig5/fig5_transects_selected.csv` |
+| Fig. S1 | `04_error_models/rework_ppc.R` (cluster), then `05_tables_figures/figS1_ppc.R` | `figS1/figS1_ppc.{png,pdf}`, `figS1/figS1_numbers.csv` |
+| Fig. S2 | `05_tables_figures/within_site_variogram.py`, then `figS2_variogram.R` | `figS2/variogram_{persite,summary}.csv`, `figS2/figS2_variogram.{png,pdf}` |
 
-## Pipeline order
+## Numbers in the text
 
-1. `01_data_prep/3dep_and_reference_rasters/` (download, derivatives, resampling), then `01_data_prep/footprint_extraction/gedi_sample_chunked.py` with `helper_speed.py` (footprint means within a 12.5 m radius, `als_chm_p90`, ecoregion join).
-2. `01_data_prep/p3d_metadata/` (acquisition-geometry predictors from tile metadata) and `01_data_prep/land_cover/` (GLC-FCS30 class per footprint), joined per site in `01_data_prep/site_joins_qc/`.
-3. `01_data_prep/r_workflow/` sections 00 to 07 (ingest, filters, z-scaling, exploratory analysis, collinearity, summaries), configured by `analysis_config.R` and `analysis_utils.R`.
-4. `02_model_fitting/section_08_model_prep.R` (seed 2025; 20% Stage 1 and 33% Stage 2 site-stratified samples; holdout is the complement), `section_09_models_stage1.R`, `section_10_models_stage2.R` (DTM fit), `section_10b_chm_sensitivity_refit.R` (16-site CHM fit).
-5. `03_evaluation/` (holdout scoring, PPCs, convergence, spatial residuals, leave-one-site-out folds and baselines), `04_coupling_analysis/`, then `05_figures_tables/`.
+| Number | Where | Source |
+|---|---|---|
+| 630,390 footprints at 18 sites; 68,786 training footprints | Abstract, 2.3, 2.4, Text S2 | `03_analysis_frame/rework_model_prep.R`; fit logs in `docs/run_logs/` |
+| Bias, RMSE and shares of errors over 5 m and 10 m, sites and footprints weighted equally | Abstract, 3.1, 4.1 | `table2/table2_site_weighted.csv` |
+| RMSE 5.37 m to 3.63 m and r 0.80 to 0.90 with the lidar ground surface | Abstract, 3.1 | `table2/fig2_panel_stats.csv`, `fig2/fig2_scatter_stats.csv` |
+| Errors beyond three SD 7 to 9 times the normal share; 2% of footprints hold 42%, 30% and 29% of the error variance | 3.1, 4.2 | `table2/error_tails.csv` |
+| DTM error by canopy height class; share of CHM errors over 5 m by forest type | 3.1 | `tableS3/`, `tableS4/` |
+| Error variance explained by the tested variables (5%, 10%, 4%) and by the group offsets | 3.2 | `data_derived/full_fits/*/r2.csv`, `table3/table3_transfer.csv` |
+| Corrections at held-out sites | 3.3 | `table3/table3_transfer.csv`, `tableS2/tableS2_transfer_groups.csv` |
+| Transect means at three sites | 3.1 | `data_derived/results/fig5/fig5_transects_selected.csv` |
+| Within-site correlation 0.57 at 60 m, 0.25 at 300 m, near 0 beyond 1 km | 3.1 | `figS2/variogram_summary.csv` |
+| Sampler settings and diagnostics | Text S2 | `docs/run_logs/` |
+| Posterior predictive shares | Text S2, Fig. S1 | `figS1/figS1_numbers.csv` |
+
+A few counts and shares in the text were computed directly from the footprint-level analysis frame,
+which is not distributed. They are the share of the DSM errors below -10 m that fall at Coastal South
+Carolina (77%), the median lidar canopy height of non-forest footprints (16 m), the share of footprints
+where the two DSM errors agree within 0.1 m (97%), the footprints removed by the screening against 3DEP
+(Text S1), and the footprint counts in the notes of Fig. 3 and Table S4.
+
+## Upstream (cluster)
+
+| Step | Script | Output used downstream |
+|---|---|---|
+| Footprint sampling of the P3D DTM and height model, 3DEP, GEDI variables, image metadata, land cover and ecoregions | `01_data_prep/` | per-site footprint tables |
+| Lidar ground surface and pit-free CHM at every footprint | `02_lidar_references/lidar_products_rebuild.R` | `lidar_products/lp_site_NN.csv.gz`, `lp_summary.csv` |
+| Analysis frame, datum steps, standardization, training sample and folds | `03_analysis_frame/rework_model_prep.R` | `rework/frame_footprints.csv.gz`, `data_derived/zconst.csv` |
+| Full fits and held-out fits | `04_error_models/run_rework_queue.sh`, `rework_fullfit.R`, `rework_fold.R` | `data_derived/full_fits/`, `data_derived/folds/`, held-out predictions |
+| Divergent-draw check and posterior predictive check | `04_error_models/rework_divcheck.R`, `rework_ppc.R` | `data_derived/ppc/` |
+| Delivered DSM at every footprint | `03_analysis_frame/p3d_dsm_direct.R`, then `merge_dsm_direct.R` | `dsm_direct/dsm_direct_frame.csv.gz`, updated frame |
+| Site facts for Table 1 | `05_tables_figures/table1_facts.R` | `data_derived/ecoregion_by_site.csv`, `data_derived/lidar_dates.csv` |
